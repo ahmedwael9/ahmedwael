@@ -4,49 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Bootstrap 4 Example</title>
 </head>
 <body>
 
-   <div class="wrap">
+    <div class="container-fluid">
 
-    <div class="top">
-        <div class="navbar">
-            <a class="logo" href="#"> Ahmed &copy</a>
-            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        </div>
-        
-       
-        <div class="lign">
-        <div>
+
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+            <ul class="navbar-nav">
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CV</a>
+                </li>
+              
+            </ul>
+        </nav>
+
+        <div class="top">
             
-            <p class="text">
-                <span class="name">Hi Iam Ahmed</span><br>
-                <span class="sumarry">creative Flutter developer for Android and ios Apps,builds exceptional UI designs with awesome animations,focusing on the quality in the first place</span>
-               <br> <span class="hed">FIRST IMPRESSIONS</span><br>
-                Iam provide best content<br> for your Business
-            </p>
-            <p class="bottom">
-            
-            </p>
-        </div>
-        <div class="img">
-            <div class="imagge">
-                <img src="images/des.png" alt="loding" width="550">
+
+            <div class="container pt-5 pl-5">
+                <p class="l">Hi,I'm <span class="name">Ahmed</span></p>      
+                <p class="l">App developer</p> 
+                <p class="ll">
+                Creative Flutter developer for Android and iOS Apps, builds exceptional UI designs with awesome animations, focusing on
+                the quality in the first place.
+
+                </p>
+                <div class="b pt-5">
+                    <button type="button" class="btn btn-danger btn-lg">See Work</button>
+                </div>
+              
             </div>
+
+            <div class="container pb-2">
+                <img class="img-fluid" src="images/logo.svg" alt="Chania" width="700" height="700">
+            </div>
+
         </div>
-      
-     </div>
-    
+
+    </div>
+
+
+
+    <div class="bodyweb">
+
+        
+        <div class="d-flex justify-content-around ">
+            <div class="p-2  ">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="images/m.jpeg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text.</p>
+                        <a href="#" class="btn btn-danger">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2  ">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="images/m.jpeg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text.</p>
+                        <a href="#" class="btn btn-danger">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2  ">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="images/m.jpeg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text.</p>
+                        <a href="#" class="btn btn-danger">See Profile</a>
+                    </div>
+                </div>
+
+            </div>
 
 
 
 
 
-   </div>
-   
+
+        </div>
+
+
+
+
+    </div>
+
 </body>
 </html>
