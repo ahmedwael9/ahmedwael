@@ -3,7 +3,7 @@ img{
     max-width: 100%;
 }
 
-.bgtop{
+body{
     background-color:rgb(43, 43, 63);
 
 }
@@ -29,7 +29,7 @@ img{
 .name{
     color: rgb(235, 161, 84);
 }
-.md{
+.meid{
     background-color:rgb(54, 60, 99) ;
     min-height: 200px;
 }
