@@ -14,6 +14,23 @@ body{
     display: flex;
     flex-direction: row;
 }
+.fas{
+    color:white;
+
+}
+.card{
+    background-color: rgba(43, 43, 63, 0.76);
+}
+.ti{
+    font-weight: bold;
+    color: rgb(235, 161, 84);
+}
+.de{
+    color: white;
+}
+
+
+
 .l{
     font-size: 50px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -33,3 +50,43 @@ body{
     background-color:rgb(54, 60, 99) ;
     min-height: 200px;
 }
+.fotter{
+    background:rgba(54, 60, 99, 0.39);
+    min-height: 200px;
+}
+
+  .btn-circle.btn-sm {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            font-size: 8px;
+            text-align: center;
+        }
+        .btn-circle.btn-md {
+            width: 50px;
+            height: 50px;
+            padding: 7px 10px;
+            border-radius: 25px;
+            font-size: 10px;
+            text-align: center;
+        }
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .face{
+            background-color: #3b5998;
+        }
+        .insta{
+            background-color:#ac2bac;
+
+        }
+        .link{
+            background-color: #0082ca;
+
+        }
