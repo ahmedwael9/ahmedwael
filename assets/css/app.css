@@ -1,0 +1,77 @@
+/* General */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2b2b3f;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Override bootstrap */
+.card {
+  background-color: rgba(43, 43, 63, 0.76);
+}
+
+/* Custom background Colors */
+.bg-darkblue {
+  background-color: #363c63;
+  min-height: 200px;
+}
+
+/* Custom Text Colors */
+.text-orange {
+  font-weight: bold;
+  color: #eba154;
+}
+
+/* Header */
+header .nav-link {
+  font-size: 25px;
+}
+
+/* Footer */
+footer {
+  background: rgba(54, 60, 99, 0.39);
+}
+
+footer .btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 12px;
+  text-align: center;
+}
+
+footer .btn-circle.btn-xl.face {
+  background-color: #3b5998;
+}
+
+footer .btn-circle.btn-xl.insta {
+  background-color: #ac2bac;
+}
+
+footer .btn-circle.btn-xl.link {
+  background-color: #0082ca;
+}
+
+/* Sections */
+#intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#intro .name {
+  color: #eba154;
+}
+/*# sourceMappingURL=app.css.map */
