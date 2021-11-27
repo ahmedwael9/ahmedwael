@@ -1,73 +1,10 @@
-$orange:rgb(235, 161, 84);
-$dark-blue:rgb(43, 43, 63);
-$bg-card:rgba(43, 43, 63, 0.76);
-
-/* General */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color:$dark-blue;
-    font-size: 18px;
-    color: white;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* Override bootstrap */
-.card {
-    background-color: $bg-card;
-}
-
-/* Custom background Colors */
-.bg-darkblue {
-    background-color: rgb(54, 60, 99);
-    min-height: 200px;
-}
-/* Custom Text Colors */
-.text-orange {
-    font-weight: bold;
-    color: $orange;
-}
+@import '_variables';
+@import '_general';
+@import '_header-footer';
+@import '_pages';
 
 
-/* Header */
-header {
-    .nav-link {
-        font-size: 25px;
-    }
-}
 
-/* Footer */
-footer {
-    background: rgba(54, 60, 99, 0.39);
-    .btn-circle.btn-xl {
-        width: 70px;
-        height: 70px;
-        padding: 10px 16px;
-        border-radius: 35px;
-        font-size: 12px;
-        text-align: center;
-        &.face {
-            background-color: #3b5998;
-        }
-        &.insta {
-            background-color: #ac2bac;
-        }
-        &.link {
-            background-color: #0082ca;
-        }
-    }
-}
 
-/* Sections */
-#intro {
-    display: flex;
-    flex-direction: row;
-    .name {
-        color: $orange;
-    }
-}
+
+

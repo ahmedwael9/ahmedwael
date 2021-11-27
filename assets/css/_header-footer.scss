@@ -1,0 +1,32 @@
+/* Header */
+header {
+    .nav-link {
+        font-size: 25px;
+    }
+}
+
+/* Footer */
+footer {
+    background: rgba(54, 60, 99, 0.39);
+
+    .btn-circle.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        border-radius: 35px;
+        font-size: 12px;
+        text-align: center;
+
+        &.face {
+            background-color: #3b5998;
+        }
+
+        &.insta {
+            background-color: #ac2bac;
+        }
+
+        &.link {
+            background-color: #0082ca;
+        }
+    }
+}

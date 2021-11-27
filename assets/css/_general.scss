@@ -1,0 +1,46 @@
+/* General */
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $dark-blue;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: auto;
+}
+
+img {
+    max-width: 100%;
+    height:400px;
+}
+
+/* Custom background Colors */
+.bg-darkblue {
+    background-color: rgb(54, 60, 99);
+    min-height: 200px;
+}
+
+/* Custom Text Colors */
+.text-orange {
+    font-weight: bold;
+    color: $orange;
+}
+
+/* Override bootstrap */
+.card {
+    background-color: $bg-card;
+    .de{
+        height: 80px;
+    }
+}

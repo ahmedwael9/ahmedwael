@@ -1,4 +1,9 @@
 /* General */
+html,
+body {
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,15 +12,24 @@ body {
   background-color: #2b2b3f;
   font-size: 18px;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 img {
   max-width: 100%;
-}
-
-/* Override bootstrap */
-.card {
-  background-color: rgba(43, 43, 63, 0.76);
+  height: 400px;
 }
 
 /* Custom background Colors */
@@ -28,6 +42,15 @@ img {
 .text-orange {
   font-weight: bold;
   color: #eba154;
+}
+
+/* Override bootstrap */
+.card {
+  background-color: rgba(43, 43, 63, 0.76);
+}
+
+.card .de {
+  height: 80px;
 }
 
 /* Header */
