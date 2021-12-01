@@ -3,26 +3,23 @@
         {
             "id": 1,
             "title": "UOP CENTER app",
-            "description": "Graduation project, providing student services ",
-            "image": "/images/Screenshot (9).png"
+            "description": "Graduation project, providing student services Graduation project, providing student servicesGraduation project, providing student servicesGraduation project, providing student services  ",
+            "image": "/images/9.png",
+            "media": [
+                "/images/9.png",
+                "/images/9.png"
+            ]
         },
         {
             "id": 2,
             "title": "a&m shop app",
             "description": "Selling sports shoes through the app",
-            "image": "/images/ah.jpg"
-        },
-        {
-            "id": 3,
-            "title": "omar",
-            "description": "this is my project",
-            "image": "/images/Screenshot (9).png"
-        },
-        {
-            "id": 4,
-            "title": "anas",
-            "description": "this is my project",
-            "image": "/images/Screenshot (9).png"
+            "image": "/images/ah.jpg",
+             "media": [
+                "/images/9.png",
+                "/images/9.png"
+            ]
+            
         }
 
     ]

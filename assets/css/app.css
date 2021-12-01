@@ -28,8 +28,7 @@ main {
 }
 
 img {
-  max-width: 100%;
-  height: 400px;
+  max-width: auto;
 }
 
 /* Custom background Colors */
@@ -47,10 +46,24 @@ img {
 /* Override bootstrap */
 .card {
   background-color: rgba(43, 43, 63, 0.76);
+  height: 100%;
 }
 
-.card .de {
-  height: 80px;
+.card .mockup {
+  height: 0;
+  background-position: center;
+  background-size: cover;
+  padding-top: 100%;
+}
+
+.card .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 /* Header */
