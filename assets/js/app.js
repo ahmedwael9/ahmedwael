@@ -38,9 +38,25 @@ document.querySelector('[data-button="langChange"]').addEventListener('click',fu
 
 
 function setTextLang(data){
-    document.querySelector('[data-text="navbar-homepage"]').innerHTML=data.navbar_homepage;
-    
-
+  if(getCookie("language")=="en"){
+    document.querySelector('body').setAttribute("dir", "ltr");
+    document.querySelector('#bootstrap').setAttribute("href", "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+  }
+  else {
+    document.querySelector('body').setAttribute("dir", "rtl")
+    document.querySelector('#bootstrap').setAttribute("href", "https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css");
+  }
+  document.querySelector('[data-text="navbar-homepage"]').innerHTML=data.navbar_homepage;
+  document.querySelector('[data-text="navbar-projects"]').innerHTML=data.navbar_projects;
+  document.querySelector('[data-text="navbar-language"]').innerHTML=data.navbar_language;
+  document.querySelector('[data-text="intro-name"]').innerHTML=data.inrto_name;
+  document.querySelector('[data-text="intro-myname"]').innerHTML=data.inrto_myname;
+  document.querySelector('[data-text="intro-jop"]').innerHTML=data.intro_jop;
+  document.querySelector('[data-text="intro-description"]').innerHTML=data.intro_description;
+  document.querySelector('[data-text="intro-description"]').innerHTML=data.intro_description;
+  document.querySelector('[data-text="intro-buttonWork"]').innerHTML=data.intro_buttonWork;
+  document.querySelector('[data-text="intro-buttonresume"]').innerHTML=data.intro_buttonresume;
+  document.querySelector('[data-text="navbar-logo"]').innerHTML=data.navbar_logo;
 }
 
 

@@ -19,8 +19,6 @@ $.getJSON("data.json", function(data) {
                 </div>
             </div>`;
         });
-
-
         container.innerHTML = allCards;
     }
 
@@ -29,25 +27,14 @@ $.getJSON("data.json", function(data) {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
     id--;
-    console.log(id);
 
      document.querySelector('[data-text="projectTitle"]').innerHTML= data.myProjects[id].title;
      document.querySelector('[data-text="projectDescription"]').innerHTML= data.myProjects[id].description;
-
-
-
     const containerMedia=document.querySelector('[data-container="media"]');
     let imges="";
     imges+=`<div data-aos="fade-up"><img src="${data.myProjects[id].image}" class="w-100 py-2" alt=""></div>`;
-
-    
     data.myProjects[id].media.forEach(element => {
         imges+=`<img src="${element}" class="w-100 py-2" alt="">`;
-        
     });
-     
-
-
-
      containerMedia.innerHTML= imges
 });

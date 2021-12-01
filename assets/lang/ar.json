@@ -1,3 +1,13 @@
 {
-    "navbar_homepage": "الصفحة الرئيسية"
+    "navbar_logo":"أحمد وائل",
+    "navbar_homepage": "الصفحة الرئيسية",
+    "navbar_projects": "المشاريع",
+    "navbar_language": "English",
+    "inrto_name":"احمد",
+    "inrto_myname":"مرحبا , انا",
+    "intro_jop":"مطور تطبيقات",
+    "intro_description":"يقوم مطور Creative Flutter لتطبيقات Android و iOS ببناء تصميمات استثنائية لواجهة المستخدم مع رسوم متحركة رائعة ، مع التركيز على الجودة في المقام الأول.",
+    "intro_buttonWork":"المشاريع",
+    "intro_buttonresume":"السيرة الذاتية"
+
 }

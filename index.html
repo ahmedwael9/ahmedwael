@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
 
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link id="bootstrap" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- Custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- AOS Animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +31,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand font-weight-bold" href="#">AHMED WAEL</a>
+          <a class="navbar-brand font-weight-bold" href="#"  data-text="navbar-logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -36,18 +41,10 @@
                   <a class="nav-link active" href="#" data-text="navbar-homepage"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects">projects</a>
+                <a class="nav-link" href="#projects" data-text="navbar-projects"></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" data-button="langChange" href="#">change language</a>
-              </li>
-              <li class="nav-item dropdown">
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                  <a class="nav-link" data-button="langChange" href="#" data-text="navbar-language"></a>
               </li>
             </ul>
           </div>
@@ -61,22 +58,20 @@
           <div class="row">
             <div class="col-sm-6 p-2">
               <h1 data-aos="fade-up">
-                Hi,I'm <span class="name">Ahmed</span>
+                <span data-text="intro-myname"></span>
+                <span class="name" data-text="intro-name"></span>
+                
               </h1>
-              <h1 class="mb-4" data-aos="fade-up" data-aos-delay="200">
-                App developer
+              <h1 class="mb-4" data-aos="fade-up" data-aos-delay="200" data-text="intro-jop">
               </h1>
-              <p class="mb-4" data-aos="fade-up" data-aos-delay="400">
-                Creative Flutter developer for Android and iOS Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.
-              </p>
+              <p class="mb-4" data-aos="fade-up"  data-text="intro-description" data-aos-delay="400">
+               </p>
 
               <div class="row" data-aos="fade-up" data-aos-delay="600">
-                <button id="obay" type="button" class="btn btn-danger btn-lg px-5 ml-3">
-                  See Work
+                <button id="obay" type="button" class="btn btn-danger btn-lg px-5 ml-3"  data-text="intro-buttonWork">
                 </button>
                 <form method="get" action="images/Ahmed Abudaqqa.pdf">
-                <button  type="submit" class="btn btn-light btn-lg mx-2">
-                  Resume
+                <button  type="submit" class="btn btn-light btn-lg mx-2"  data-text="intro-buttonresume">
                 </button>
                 </form>
               </div>

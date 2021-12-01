@@ -1,3 +1,14 @@
 {
-    "navbar_homepage": "homepage"
+    "navbar_logo":"AHMED WAEL",
+    "navbar_homepage": "homepage",
+    "navbar_projects": "projects",
+    "navbar_language": "عربي",
+    "inrto_name":"Ahmed",
+    "inrto_myname":"Hi,I'm",
+    "intro_jop":"App developer",
+    "intro_description":"Creative Flutter developer for Android and iOS Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.",
+    "intro_buttonWork":"See work",
+    "intro_buttonresume":"Resume"
+    
+    
 }
