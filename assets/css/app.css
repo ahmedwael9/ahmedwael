@@ -42,6 +42,12 @@ textarea {
   border-radius: 30px !important;
 }
 
+.owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* Custom background Colors */
 .bg-darkblue {
   background-color: #363c63;

@@ -4,6 +4,28 @@ AOS.init({
     mirror: true
 });
 
+window.onload = function(){
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      autoplay:true,
+      autoplayTimeout:2000,
+      autoplayHoverPause:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
+      }
+  })
+};
+
 
 // Save EN default language
 if (!document.cookie.indexOf("language=") >= 0) {
