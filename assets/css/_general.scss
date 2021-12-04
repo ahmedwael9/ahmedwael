@@ -25,6 +25,16 @@ img {
     max-width: auto;
 }
 
+input,
+textarea {
+    border-radius: 30px !important;
+    padding: 1.5rem 1.25rem !important;
+}
+
+.btn {
+    border-radius: 30px !important;
+}
+
 /* Custom background Colors */
 .bg-darkblue {
     background-color: rgb(54, 60, 99);
@@ -55,6 +65,17 @@ img {
         /* number of lines to show */
         line-clamp: 2;
         -webkit-box-orient: vertical;
+
     }
+}
+
+.cardbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .seeprofile{
+        width: fit-content;
+    }
+
 }
 

@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+    <meta name="theme-color" content="#dc3545" />
+
+     <!-- favicon -->
+     <link rel="icon" type="image/x-icon" href="/images/icon.png">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
-
+     
     <!-- Bootstrap 4 -->
     <link id="bootstrap" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
@@ -70,10 +74,8 @@
               <div class="row" data-aos="fade-up" data-aos-delay="600">
                 <button id="obay" type="button" class="btn btn-danger btn-lg px-5 ml-3"  data-text="intro-buttonWork">
                 </button>
-                <form method="get" action="images/Ahmed Abudaqqa.pdf">
-                <button  type="submit" class="btn btn-light btn-lg mx-2"  data-text="intro-buttonresume">
-                </button>
-                </form>
+                <a href="images/Ahmed Abudaqqa.pdf" class="btn btn-light btn-lg mx-2"  data-text="intro-buttonresume" target="_blank">
+                </a>
               </div>
             </div>
             <div class="col-sm-6" data-aos="fade-left">
@@ -85,17 +87,16 @@
 
       <section id="skills" class="bg-darkblue">
         <div class="container py-5">
-          <h2 class="mb-3 text-uppercase" data-aos="fade-up" data-aos-delay="200">What i do</h2>
-          <p data-aos="fade-up" data-aos-delay="400">
-            Creative Flutter developer for Android and iOS Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.
+          <h2 class="mb-3 text-uppercase" data-aos="fade-up" data-aos-delay="200" data-text="intro-ido"></h2>
+          <p data-aos="fade-up" data-aos-delay="400" data-text="intro-idoDescription">
           </p>
           <div class="row pt-4 text-center">
             <div class="col-6 col-sm-6 col-md-4 my-2" data-aos="fade-up">
               <div class="card py-5">
                 <i class="fas fa-paint-brush fa-4x mb-2"></i>
                 <div class="card-body">
-                  <h4 class="text-orange text-uppercase card-title text-center">App Design UX/UI</h4>
-                  <p class="de card-text text-center">Intuitive interfaces with focus on the experiences of end users,using adobe XD and Figma.</p>
+                  <h4 class="text-orange text-uppercase card-title text-center" data-text="card-titleapp"></h4>
+                  <p class="de card-text text-center" data-text="card-descriptionapp"></p>
                 </div>
               </div>
             </div>
@@ -103,8 +104,8 @@
               <div class="card py-5">
                 <i class="fas fa-mobile-alt fa-4x mb-2"></i>
                 <div class="card-body">
-                  <h4 class="text-orange text-uppercase card-title text-center">Mobile Application</h4>
-                  <p class="de card-text text-center">Using Android studio and flutter.</p>
+                  <h4 class="text-orange text-uppercase card-title text-center" data-text="card-titlemobile"></h4>
+                  <p class="de card-text text-center" data-text="card-descriptionmobile"></p>
                 </div>
               </div>
             </div>
@@ -112,8 +113,8 @@
               <div class="card py-5">
                 <i class="fas fa-laptop-code fa-4x mb-2"></i>
                 <div class="card-body">
-                  <h4 class="text-orange text-uppercase card-title text-center">Web Development</h4>
-                  <p class="de card-text text-center">front-end developer.</p>
+                  <h4 class="text-orange text-uppercase card-title text-center" data-text="card-titleweb"></h4>
+                  <p class="de card-text text-center" data-text="card-descriptionweb"></p>
                 </div>
               </div>
             </div>
@@ -148,6 +149,39 @@
           </div>
         </div>
       </section>
+
+      <section>
+        <div class="container-fluid bg-darkblue py-5">
+          <div class="container text-center py-5">
+            <h2 class="font-weight-bold" >Hire Me</h2>
+            <form action="https://formspree.io/f/mlezryoz" method="POST">
+
+              <div class="mx-auto" style="max-width: 600px;" >
+                <div class="form-group ">
+                    <input type="text rounded-circle" class="form-control" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group ">
+                    <input type="email" class="form-control" name="email" placeholder="Your name" required>
+                </div> 
+                <div class="form-group">
+                    <textarea class="form-control" rows="10" name="message" placeholder="your message"></textarea>
+                </div>
+                 <button type="submit" class="btn btn-danger btn-lg w-100">Send</button>
+              </div>
+
+            </form>
+
+          
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+
+
     </main>
 
     <footer class="container-fulid">

@@ -57,6 +57,14 @@ function setTextLang(data){
   document.querySelector('[data-text="intro-buttonWork"]').innerHTML=data.intro_buttonWork;
   document.querySelector('[data-text="intro-buttonresume"]').innerHTML=data.intro_buttonresume;
   document.querySelector('[data-text="navbar-logo"]').innerHTML=data.navbar_logo;
+  document.querySelector('[data-text="intro-ido"]').innerHTML=data.intro_ido;
+  document.querySelector('[data-text="intro-idoDescription"]').innerHTML=data.intro_idoDescription;
+  document.querySelector('[data-text="card-titleapp"]').innerHTML=data.card_titleapp;
+  document.querySelector('[data-text="card-descriptionapp"]').innerHTML=data.card_descriptionapp;
+  document.querySelector('[data-text="card-titlemobile"]').innerHTML=data.card_titlemobile;
+  document.querySelector('[data-text="card-descriptionmobile"]').innerHTML=data.card_descriptionmobile;
+  document.querySelector('[data-text="card-titleweb"]').innerHTML=data.card_titleweb;
+  document.querySelector('[data-text="card-descriptionweb"]').innerHTML=data.card_descriptionweb;
 }
 
 

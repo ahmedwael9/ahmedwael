@@ -11,10 +11,13 @@ $.getJSON("data.json", function(data) {
             <div class="col-12 col-sm-6 col-md-4 my-2" data-aos="fade-up" data-aos-delay="200" >
                 <div class="card">
                     <div class="mockup"style="background-image: url(${project.image});"></div>
-                    <div class="card-body">
-                        <h4 class="text-orange text-uppercase card-title">${ project.title} </h4>
-                        <p class="description card-text">${project.description}</p>
-                        <a href="/project.html?id=${project.id}" class="btn btn-danger">See Profile</a>
+                    <div class="cardbody card-body">
+                    <div>
+                    <h4 class="text-orange text-uppercase card-title">${ project.title} </h4>
+                    <p class="description card-text">${project.description}</p>
+                    
+                    </div>
+                        <a href="/project.html?id=${project.id}" class="seeprofile btn btn-danger mt-2">See Profile</a>
                     </div>
                 </div>
             </div>`;

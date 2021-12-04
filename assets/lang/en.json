@@ -8,7 +8,14 @@
     "intro_jop":"App developer",
     "intro_description":"Creative Flutter developer for Android and iOS Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.",
     "intro_buttonWork":"See work",
-    "intro_buttonresume":"Resume"
-    
+    "intro_buttonresume":"Resume",
+    "intro_ido":"What I do",
+    "intro_idoDescription":"Creative Flutter developer for Android and iOS Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.",
+    "card_titleapp":"App Design UX/UI",
+    "card_descriptionapp":"Intuitive interfaces with focus on the experiences of end users,using adobe XD and Figma.",
+    "card_titlemobile":"Mobile Applications",
+    "card_descriptionmobile":"Using Android studio and flutter.",
+    "card_titleweb":"Web Development",
+    "card_descriptionweb":"front-end developer."
     
 }

@@ -8,6 +8,14 @@
     "intro_jop":"مطور تطبيقات",
     "intro_description":"يقوم مطور Creative Flutter لتطبيقات Android و iOS ببناء تصميمات استثنائية لواجهة المستخدم مع رسوم متحركة رائعة ، مع التركيز على الجودة في المقام الأول.",
     "intro_buttonWork":"المشاريع",
-    "intro_buttonresume":"السيرة الذاتية"
+    "intro_buttonresume":"السيرة الذاتية",
+    "intro_ido":"ماذا أنا أفعل",
+    "intro_idoDescription":"يقوم مطور Creative Flutter لتطبيقات Android و iOS ببناء تصميمات استثنائية لواجهة المستخدم مع رسوم متحركة رائعة ، مع التركيز على الجودة في المقام الأول.",
+    "card_titleapp":"UX/UI تصميم التطبيق",
+    "card_descriptionapp":"واجهات بديهية مع التركيز على تجارب المستخدمين النهائيين باستخدام Adobe XD و Figma.",
+    "card_titlemobile":"تطبيقات الهواتف",
+    "card_descriptionmobile":"باستخدام android studio و flutter",
+    "card_titleweb":"مطور صفحات ويب",
+    "card_descriptionweb":"front-end مطور"
 
 }
