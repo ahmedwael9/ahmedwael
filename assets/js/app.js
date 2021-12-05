@@ -54,6 +54,7 @@ function setTextLang(data){
   document.querySelector('[data-text="navbar-language"]').innerHTML=data.navbar_language;
   // If homepage
   if(document.querySelector('[data-text="intro-name"]')) {
+    initOwl();
     document.querySelector('[data-text="intro-name"]').innerHTML=data.inrto_name;
     document.querySelector('[data-text="intro-myname"]').innerHTML=data.inrto_myname;
     document.querySelector('[data-text="intro-jop"]').innerHTML=data.intro_jop;
@@ -111,27 +112,62 @@ function setTextLang(data){
      containerMedia.innerHTML= imges
 }
 
-window.onload = function(){
-  $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      autoplay:true,
-      autoplayTimeout:2000,
-      autoplayHoverPause:false,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:3
-          }
-      }
-  })
-};
+
+function initOwl() {
+  document.querySelector('[data-container="cards"]').innerHTML = "";
+    let cards=
+    ` <div  dir="ltr" class="owl-carousel owl-theme pt-4 text-center">
+            <div class="item h-100 my-2">
+              <div class="card h-100 py-5">
+                <i class="fas fa-paint-brush fa-4x mb-2"></i>
+                <div class="card-body">
+                  <h4 class="text-orange text-uppercase card-title text-center" data-text="card-titleapp"></h4>
+                  <p class="de card-text text-center" data-text="card-descriptionapp"></p>
+                </div>
+              </div>
+            </div>
+            <div class="item h-100 my-2">
+              <div class="card h-100 py-5">
+                <i class="fas fa-mobile-alt fa-4x mb-2"></i>
+                <div class="card-body">
+                  <h4 class="text-orange text-uppercase card-title text-center" data-text="card-titlemobile"></h4>
+                  <p class="de card-text text-center" data-text="card-descriptionmobile"></p>
+                </div>
+              </div>
+            </div>
+            <div class="item h-100 my-2">
+              <div class="card h-100 py-5">
+                <i class="fas fa-laptop-code fa-4x mb-2"></i>
+                <div class="card-body">
+                  <h4 class="text-orange text-uppercase card-title text-center" data-text="card-titleweb"></h4>
+                  <p class="de card-text text-center" data-text="card-descriptionweb"></p>
+                </div>
+              </div>
+            </div>
+          </div>`;
+    document.querySelector('[data-container="cards"]').innerHTML = cards;
+    setTimeout(() => {
+      $('.owl-carousel').owlCarousel({
+       loop:true,
+       margin:10,
+       nav:true,
+       autoplay:true,
+       autoplayTimeout:2000,
+       autoplayHoverPause:false,
+       responsive:{
+           0:{
+               items:1
+           },
+           600:{
+               items:2
+           },
+           1000:{
+               items:3
+           }
+       }
+   })
+    }, 100);
+}
 
 function getCookie(cname) {
   let name = cname + "=";
@@ -148,30 +184,3 @@ function getCookie(cname) {
   }
   return "";
 }
-
-
-
-// document.getElementById('name');
-// document.getElementsByClassName('name');
-// document.getElementsByTagName('p');
-
-
-// // document.querySelectorAll('p');
-// var p = document.querySelectorAll('p');
-// p.style.color="red"
-// console.log(p);
-
-// function show(){
-//     alert("cfhcfh");
-// }
-
-// document.getElementById("obay").addEventListener('click', function(){
-//     show();
-// })
-
-// function getname() {
-//     p.forEach(element => {
-//         element.innerHTML = "<h1>obay</h1>";
-//     });
-// }
-
