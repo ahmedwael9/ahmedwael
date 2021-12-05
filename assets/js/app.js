@@ -8,7 +8,7 @@ AOS.init({
 
 
 // Save EN default language
-if (!document.cookie.indexOf("language=") >= 0) {
+if (!getCookie("language")) {
   // set a new cookie
   expiry = new Date();
   expiry.setTime(expiry.getTime()+(10*60*36000)); // Ten minutes
