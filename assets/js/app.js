@@ -4,27 +4,7 @@ AOS.init({
     mirror: true
 });
 
-window.onload = function(){
-  $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      autoplay:true,
-      autoplayTimeout:2000,
-      autoplayHoverPause:false,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:3
-          }
-      }
-  })
-};
+
 
 
 // Save EN default language
@@ -88,7 +68,27 @@ function setTextLang(data){
   document.querySelector('[data-text="card-titleweb"]').innerHTML=data.card_titleweb;
   document.querySelector('[data-text="card-descriptionweb"]').innerHTML=data.card_descriptionweb;
 }
-
+window.onload = function(){
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      autoplay:true,
+      autoplayTimeout:2000,
+      autoplayHoverPause:false,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
+      }
+  })
+};
 
 function getCookie(cname) {
   let name = cname + "=";
