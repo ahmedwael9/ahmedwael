@@ -52,6 +52,17 @@ function setTextLang(data){
   document.querySelector('[data-text="navbar-homepage"]').innerHTML=data.navbar_homepage;
   document.querySelector('[data-text="navbar-projects"]').innerHTML=data.navbar_projects;
   document.querySelector('[data-text="navbar-language"]').innerHTML=data.navbar_language;
+
+  // SEO (Default)
+  document.querySelector('[data-text="title"]').innerHTML=data.meta_title;
+  document.querySelectorAll('[data-meta="title"]').forEach(element => {
+    element.setAttribute('content', data.meta_title);
+  });
+  document.querySelectorAll('[data-meta="description"]').forEach(element => {
+    element.setAttribute('content', data.meta_description);
+  });
+  document.querySelector('[data-meta="tags"]').setAttribute('content', data.meta_tags);
+  
   // If homepage
   if(document.querySelector('[data-text="intro-name"]')) {
     initOwl();
@@ -109,7 +120,16 @@ function setTextLang(data){
     data.myProjects[id].media.forEach(element => {
         imges+=`<img src="${element}" class="w-100 py-2" alt="">`;
     });
-     containerMedia.innerHTML= imges
+     containerMedia.innerHTML= imges;
+     
+    // SEO for Project page
+    document.querySelector('[data-text="title"]').innerHTML = data.myProjects[id].title;
+    document.querySelectorAll('[data-meta="title"]').forEach(element => {
+      element.setAttribute('content', data.myProjects[id].title);
+    });
+    document.querySelectorAll('[data-meta="description"]').forEach(element => {
+      element.setAttribute('content', data.myProjects[id].description);
+    });
 }
 
 
