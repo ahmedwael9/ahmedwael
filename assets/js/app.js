@@ -81,6 +81,26 @@ function setTextLang(data){
     document.querySelector('[data-text="card-descriptionmobile"]').innerHTML=data.card_descriptionmobile;
     document.querySelector('[data-text="card-titleweb"]').innerHTML=data.card_titleweb;
     document.querySelector('[data-text="card-descriptionweb"]').innerHTML=data.card_descriptionweb;
+    document.querySelector('[data-text="contact-hireme"]').innerHTML=data.contact_hireme;
+    document.querySelector('[data-text="intro-skills"]').innerHTML=data.intro_skills;
+    document.querySelector('[data-text="intro-flutter"]').innerHTML=data.intro_flutter;
+    document.querySelector('[data-text="intro-descriptionflutter"]').innerHTML=data.intro_descriptionflutter;
+    document.querySelector('[data-text="intro-webdev"]').innerHTML=data.intro_webdev;
+    document.querySelector('[data-text="intro-descwebdev"]').innerHTML=data.intro_descwebdev;
+    document.querySelector('[data-text="intro-design"]').innerHTML=data.intro_design;
+    document.querySelector('[data-text="intro-desdesign"]').innerHTML=data.intro_desdesign;
+    document.querySelector('[data-text="intro-Communication"]').innerHTML=data.intro_Communication;
+    document.querySelector('[data-text="intro-descCommunication"]').innerHTML=data.intro_descCommunication;
+    document.querySelector('[data-text="intro-mywork"]').innerHTML=data.intro_mywork;
+    document.querySelector('[data-text="intro-descmywork"]').innerHTML=data.intro_descmywork;
+    document.querySelector('[data-text="intro-whatido"]').innerHTML=data.intro_whatido;
+    document.querySelector('[data-text="intro-whatidomore"]').innerHTML=data.intro_whatidomore;
+
+
+    document.querySelector('[data-placeholder="contact-name"]').setAttribute('placeholder', data.contact_name);
+    document.querySelector('[data-placeholder="contact-email"]').setAttribute('placeholder', data.contact_email);
+    document.querySelector('[data-placeholder="contact-message"]').setAttribute('placeholder', data.contact_message);
+    document.querySelector('[data-text="contact-send"]').innerHTML=data.contact_send;
   }
    // Show projects in homepage
     if(document.querySelector('[data-container="projects"]')){
@@ -98,7 +118,7 @@ function setTextLang(data){
                     <p class="description card-text">${project.description}</p>
                     
                     </div>
-                        <a href="/project.html?id=${project.id}" class="seeprofile btn btn-danger mt-2">See Profile</a>
+                        <a href="/project.html?id=${project.id}" class="seeprofile btn btn-danger mt-4" data-text="projects-seemore">${data.projects_seemore}</a>
                     </div>
                 </div>
             </div>`;
