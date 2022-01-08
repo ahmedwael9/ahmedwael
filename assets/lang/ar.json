@@ -17,6 +17,16 @@
              "media": [
                 "/images/mokup.png"
             ]
+        },
+
+        {
+            "id": 2,
+            "title": "نشمي برجر",
+            "description": "قم بشراء الطعام عبر الإنترنت من مطعم نشمي برجر",
+            "image": "/images/170.png",
+             "media": [
+                "/images/171.png"
+            ]
         }
     ],
     "meta_title":"أحمد وائل",
