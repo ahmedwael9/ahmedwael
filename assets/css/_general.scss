@@ -18,6 +18,57 @@ body {
     font-family: 'Almarai', sans-seri;
 }
 
+
+
+
+svg .set,.st1 {
+    animation: animate 2s ease infinite;
+    transform-origin: center;
+    transform-box:fill-box ;
+    
+}
+
+svg .st36 {
+    animation: lin 2s ease infinite;
+    transform-origin: center;
+    transform-box:fill-box ;
+    
+}
+
+.st48,.st47,.st45{
+    animation: fw 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box:fill-box ;
+}
+@keyframes animate{
+   from{
+       transform: rotateZ(0deg);
+   }
+   to{
+    transform: rotateZ(360deg);
+   }
+}
+@keyframes fw{
+   from{
+       transform: rotatey(0deg);
+       transform: rotatex(0deg);
+   }
+   to{
+    transform: rotatey(40deg);
+    transform: rotatex(40deg);
+   }
+}
+
+@keyframes lin{
+    from{
+        transform: rotatey(0deg);
+    }
+    to{
+     transform: rotatey(50deg);
+    }
+ }
+
+
 main {
     flex: auto;
 }
