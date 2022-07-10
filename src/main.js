@@ -2,8 +2,10 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
+
+// import bootstrap from "bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap.min.js"
+// import Bootstrap from "bootstrap/dist/js/bootstrap.min.js"
 
 import "bootstrap-icons/font/bootstrap-icons.css"
 
