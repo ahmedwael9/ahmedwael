@@ -6,7 +6,7 @@
   <div class="container">
     <a class="navbar-brand " href="#">
       <div class="">
-          <g-link class="link" to="/#/" >
+          <g-link class="link" to="/">
             <h3 class="themetext logo  fs-4 fw-bolder" >AHMAD WAEL</h3>
             <div class=" logo-des fs-7 fw-lighter">FullStack Developer</div>
           </g-link>

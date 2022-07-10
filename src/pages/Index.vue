@@ -119,7 +119,7 @@
             <h5 class="text-uppercase card-title">{{work.title}}</h5>
            <p class="card-text">{{work.description}}</p>
            </div>
-           <g-link to="/projects/1" class="themebtn seeprofile btn btn-secondary mt-4">{{data.projects_seemore}}</g-link>
+           <g-link :to="`/projects/${work.id}`" class="themebtn seeprofile btn btn-secondary mt-4">{{data.projects_seemore}}</g-link>
            </div>
         </div>
         </div>
