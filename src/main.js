@@ -2,8 +2,10 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
-import "~/vendor/bootstrap.min.css"
-import '~/vendor/bootstrap-icons/bootstrap-icons.css'
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.min.js"
+
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
