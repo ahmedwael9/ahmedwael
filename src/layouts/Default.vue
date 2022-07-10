@@ -25,24 +25,24 @@
         </li>
         
         <li class="nav-item">
-          <a @click="sum"  id="lang" class=" nav-link " href="#">{{data.navbar_language}}</a>
+          <a id="lang" class=" nav-link " href="#">{{data.navbar_language}}</a>
         </li>
         
          <li id="theme" class="nav-item visually-hidden">
            <div class="nav-link bg-light mx-3" id="chang">
             <div class="d-flex align-items-center">
-             <div class=""><button @click="secondary" type="button" class="btn btn-secondary p-2 mx-1"></button></div>
-             <div class=""><button @click="primary" type="button" class="btn btn-primary p-2 mx-1"></button></div>
-             <div id="warning"><button @click="warning" type="button" class="btn btn-warning p-2 mx-1"></button></div>
-             <div class=""><button @click="danger" type="button" class="btn btn-danger p-2 mx-1"></button></div>
+             <div class=""><button  type="button" class="btn btn-secondary p-2 mx-1"></button></div>
+             <div class=""><button  type="button" class="btn btn-primary p-2 mx-1"></button></div>
+             <div id="warning"><button  type="button" class="btn btn-warning p-2 mx-1"></button></div>
+             <div class=""><button  type="button" class="btn btn-danger p-2 mx-1"></button></div>
             </div>
           </div>
         </li> 
         
         <li class="nav-item">
           <div>
-           <button v-if="isTheme==true" type="button" @click="ChangeTheme" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-brush"></i></button>
-          <button v-else @click="CloseOptin" type="button" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-x"></i></button> 
+           <button v-if="isTheme==true" type="button" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-brush"></i></button>
+          <button v-else  type="button" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-x"></i></button> 
          
           </div>
         </li>
@@ -73,127 +73,17 @@
   </div>
 </template>
 <script>
-import jsonen from '../lang/en.json'
-import jsonar from '../lang/ar.json'
+import jsonen from '@/lang/en.json'
+
 export default {
   metaInfo: {
     title: 'header'
   },
-  
   data() {
     return {
       isTheme:true,
-       lang:(localStorage.getItem('lang')!="true"&&localStorage.getItem('lang')!="false")?true:localStorage.getItem('lang'),
-      data:(localStorage.getItem('lang')=="true")?jsonen:jsonar,
-     
+      data: jsonen,
     }
-  },
-   
-
-   mounted() {
-    this.data=(localStorage.getItem('lang')=="true")?jsonen:jsonar
-    this.project=(localStorage.getItem('lang')=="true")?jsonen.myProjects:jsonar.myProjects
-    this.EXPERIENCE=(localStorage.getItem('lang')=="true")?jsonen.work_exp:jsonar.work_exp
-  },
-
-   methods: {
-     sum()  {
-      this.lang=!this.lang
-      localStorage.setItem('lang',this.lang)
-      this.data=(localStorage.getItem('lang')=="true")?jsonen:jsonar
-      this.project= data.myProjects
-      this.EXPERIENCE=this.data.work_exp
-     },
-      ChangeTheme(){
-      this.isTheme=!this.isTheme
-      document.getElementById("theme").classList.remove("visually-hidden");
-     },
-     CloseOptin(){
-      this.isTheme=!this.isTheme
-      document.getElementById("theme").classList.add("visually-hidden");
-     },
-     warning(){
-        document.querySelectorAll('.themetext').forEach(function (elem) {
-        elem.classList.remove('text-primary');
-        elem.classList.remove('text-danger');
-        elem.classList.remove('text-dark');
-      	elem.classList.add('text-warning');
-       });
-        document.querySelectorAll('.themebg').forEach(function (elem) {
-          elem.classList.remove('bg-primary');
-          elem.classList.remove('bg-danger');
-          elem.classList.remove('bg-secondary');
-      	elem.classList.add('bg-warning');
-       });
-        document.querySelectorAll('.themebtn').forEach(function (elem) {
-      	elem.classList.remove('btn-primary');
-      	elem.classList.remove('btn-danger');
-        elem.classList.remove('btn-secondary');
-        elem.classList.remove('btn-secondary');
-      	elem.classList.add('btn-warning');
-       });
-    },
-    danger(){
-        document.querySelectorAll('.themetext').forEach(function (elem) {
-        elem.classList.remove('text-primary');
-      	elem.classList.remove('text-warning');
-      	elem.classList.remove('text-dark');
-      	elem.classList.add('text-danger');
-       });
-        document.querySelectorAll('.themebg').forEach(function (elem) {
-          elem.classList.remove('bg-primary');
-          elem.classList.remove('bg-warning');
-          elem.classList.remove('bg-secondary');
-      	elem.classList.add('bg-danger');
-       });
-        document.querySelectorAll('.themebtn').forEach(function (elem) {
-      	elem.classList.remove('btn-primary');
-        elem.classList.remove('btn-secondary');
-      	elem.classList.remove('btn-warning');
-      	elem.classList.remove('btn-secondary');
-        elem.classList.add('btn-danger');
-       });
-    },
-    primary(){
-        document.querySelectorAll('.themetext').forEach(function (elem) {
-      	elem.classList.remove('text-warning');
-      	elem.classList.remove('text-danger');
-      	elem.classList.remove('text-dark');
-      	elem.classList.add('text-primary');
-       });
-        document.querySelectorAll('.themebg').forEach(function (elem) {
-      	elem.classList.remove('bg-warning');
-      	elem.classList.remove('bg-danger');
-      	elem.classList.remove('bg-secondary');
-      	elem.classList.add('bg-primary');
-       });
-        document.querySelectorAll('.themebtn').forEach(function (elem) {
-      	elem.classList.remove('btn-warning');
-        elem.classList.remove('btn-secondary');
-        elem.classList.remove('btn-danger');
-      	elem.classList.add('btn-primary');
-       });
-    },
-    secondary(){
-        document.querySelectorAll('.themetext').forEach(function (elem) {
-      	elem.classList.remove('text-warning');
-      	elem.classList.remove('text-danger');
-      	elem.classList.remove('text-primary');
-      	elem.classList.add('text-dark');
-       });
-        document.querySelectorAll('.themebg').forEach(function (elem) {
-      	elem.classList.remove('bg-warning');
-      	elem.classList.remove('bg-danger');
-      	elem.classList.remove('bg-primary');
-      	elem.classList.add('bgsecondary');
-       });
-        document.querySelectorAll('.themebtn').forEach(function (elem) {
-      	elem.classList.remove('btn-warning');
-        elem.classList.remove('btn-primary');
-        elem.classList.remove('btn-danger');
-      	elem.classList.add('btn-secondary');
-       });
-    },
   },
 }
 </script>

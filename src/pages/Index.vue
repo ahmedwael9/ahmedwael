@@ -1,54 +1,5 @@
 <template>
   <Layout>
-<!-- <header class="header">
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
-    <a class="navbar-brand " href="#">
-      <div class="">
-          <div class="themetext logo  fs-4 fw-bolder" >AHMAD WAEL</div>
-          <div class=" logo-des fs-7 fw-lighter">FullStack Developer</div>
-      </div>
-      </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a  class="nav-link active "  href="#">{{data.navbar_homepage}}</a>
-        </li>
-        <li class="nav-item">
-          <a  class="nav-link Projects " href="#"  >{{data.navbar_projects}}</a>
-        </li>
-        
-        <li class="nav-item">
-          <a @click="sum"  class="nav-link " href="#">{{data.navbar_language}}</a>
-        </li>
-        
-        <li id="theme" class="nav-item visually-hidden">
-           <div class="nav-link bg-light mx-3" id="chang">
-            <div class="d-flex align-items-center">
-             <div class=""><button @click="primary" type="button" class="btn btn-secondary p-2 mx-1"></button></div>
-             <div class=""><button @click="primary" type="button" class="btn btn-primary p-2 mx-1"></button></div>
-             <div id="warning"><button @click="warning" type="button" class="btn btn-warning p-2 mx-1"></button></div>
-             <div class=""><button @click="danger" type="button" class="btn btn-danger p-2 mx-1"></button></div>
-            </div>
-          </div>
-        </li>
-        
-        <li class="nav-item">
-          <div>
-          <button v-if="isTheme==true" type="button" @click="ChangeTheme" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-brush"></i></button>
-          <button v-else @click="CloseOptin" type="button" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-x"></i></button>
-         
-          </div>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
-</header> -->
  <section > 
       <div class="animation-area">
         <ul class="box-area">
@@ -162,14 +113,13 @@
       <div class="row ">
         <div v-for="work in project" :key="work.id" class="col-6 col-sm-6 col-md-4">
          <div class="card">
-          <!-- :style="{ backgroundImage: `url(${require('@/assets/images/9.png')})` }" -->
           <div  :style="`backgroundImage: url(${work.image})`" class="card-img-top"></div>
           <div class="cardbody card-body">
            <div class="">
             <h5 class="text-uppercase card-title">{{work.title}}</h5>
            <p class="card-text">{{work.description}}</p>
            </div>
-           <a href="Projects" class="themebtn seeprofile btn btn-secondary mt-4">{{data.projects_seemore}}</a>
+           <g-link to="/projects/1" class="themebtn seeprofile btn btn-secondary mt-4">{{data.projects_seemore}}</g-link>
            </div>
         </div>
         </div>
@@ -201,54 +151,26 @@
 </template>
 
 <script>
-
-import jsonen from '../lang/en.json'
-import jsonar from '../lang/ar.json'
+import jsonen from '@/lang/en.json'
 export default {
   metaInfo: {
     title: 'Index'
   },
   data() {
     return {
-      lang:(localStorage.getItem('lang')!="true"&&localStorage.getItem('lang')!="false")?true:localStorage.getItem('lang'),
-      data:(localStorage.getItem('lang')=="true")?jsonen:jsonar,
-      project:[], 
-      EXPERIENCE:[],
+      data: jsonen,
+      project:jsonen.myProjects, 
+      EXPERIENCE:jsonen.work_exp,
       isTheme:true
     }
   },
-  // watch:{
-  //   '$route.query.cid'(newId, oldId) {
-  //            this.data=(localStorage.getItem('lang')=="true")?jsonen:jsonar
-  //   this.project=(localStorage.getItem('lang')=="true")?jsonen.myProjects:jsonar.myProjects
-  //   this.EXPERIENCE=(localStorage.getItem('lang')=="true")?jsonen.work_exp:jsonar.work_exp
-  //    }},
 
    methods: {
-    
-     sum(){
-      this.lang=!this.lang
-      localStorage.setItem('lang',this.lang)
-      this.data=(localStorage.getItem('lang')=="true")?jsonen:jsonar
-      this.project=this.data.myProjects
-      this.EXPERIENCE=this.data.work_exp
-      this.$forceUpdate();
-     },
 
-     ChangeTheme(){
-      this.isTheme=!this.isTheme
-      document.getElementById("theme").classList.remove("visually-hidden");
-     },
-     CloseOptin(){
-      this.isTheme=!this.isTheme
-      document.getElementById("theme").classList.add("visually-hidden");
-     }
+     
   },
 
   mounted() {
-    this.data=(localStorage.getItem('lang')=="true")?jsonen:jsonar
-    this.project=(localStorage.getItem('lang')=="true")?jsonen.myProjects:jsonar.myProjects
-    this.EXPERIENCE=(localStorage.getItem('lang')=="true")?jsonen.work_exp:jsonar.work_exp
   },
 }
 </script>

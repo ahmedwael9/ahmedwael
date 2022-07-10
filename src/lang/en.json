@@ -42,28 +42,28 @@
             "id": 1,
             "title": "UOP CENTER app",
             "description": "Graduation project, providing student services Graduation project, providing student servicesGraduation project, providing student servicesGraduation project, providing student services  ",
-            "image":  "../assets/images/9.png",
+            "image":  "/images/9.png",
             "media": [
                
-                "@/assets/images/2385.png"
+                "/images/2385.png"
             ]
         },
         {
             "id": 2,
             "title": "a&m shop app",
             "description": "Selling sports shoes through the app",
-            "image": "/assets/images/ah.jpg",
+            "image": "/images/ah.jpg",
              "media": [
-                "@/assets/images/mokup.png"
+                "/images/mokup.png"
             ]
         },
         {
             "id": 3,
             "title": "Nashmi Burger",
             "description": "Buy food online from Nashmi Burger Restaurant",
-            "image": "/assets/images/170.png",
+            "image": "/images/170.png",
              "media": [
-                "@/assets/images/171.png"
+                "/images/171.png"
             ]
         }
     ],
