@@ -1,19 +1,23 @@
-const state={
-    
+const state = {
+    currentLang: "primary",
 }
-const getters={
 
+const getters = {
+    currentLang: state => state.currentLang,
 }
-const actions={
 
-}
-const mutations={
+const actions = {}
 
+const mutations = {
+    changeCurrentLang: (state, payload) => {
+        state.currentLang = payload
+    }
 }
+
 export default {
-    // namespaced:true,
+    namespaced: true,
     state,
     getters,
     actions,
-    mutations
-    }
+    mutations,
+}

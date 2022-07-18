@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 import themes from './modules/themes'
+import languages from './modules/languages'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,8 @@ if(process.isClient) {
 
 export default new Vuex.Store({
     modules: {
-        themes
+        themes,
+        languages,
     },
     plugins
 })

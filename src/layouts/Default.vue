@@ -31,10 +31,10 @@
 
         <li class="nav-item position-relative">
           <div :class="{ 'opened' : showThemes }" class="show-theme">
-            <button @click="setTheme('danger')" type="button" class="btn btn-danger position-absolute end-0 bottom-0 top-0 start-0"></button>
-            <button @click="setTheme('primary')" type="button" class="btn btn-primary position-absolute end-0 bottom-0 top-0 start-0"></button>
-            <button @click="setTheme('warning')" type="button" class="btn btn-warning position-absolute end-0 bottom-0 top-0 start-0"></button>
-            <button @click="setTheme('secondary')" type="button" class="btn btn-secondary position-absolute end-0 bottom-0 top-0 start-0"></button>
+            <button @click="setTheme('danger')" type="button" class="btn btn-danger position-absolute end-0 bottom-0 top-0 start-0 p-0"></button>
+            <button @click="setTheme('primary')" type="button" class="btn btn-primary position-absolute end-0 bottom-0 top-0 start-0 p-0"></button>
+            <button @click="setTheme('warning')" type="button" class="btn btn-warning position-absolute end-0 bottom-0 top-0 start-0 p-0"></button>
+            <button @click="setTheme('secondary')" type="button" class="btn btn-secondary position-absolute end-0 bottom-0 top-0 start-0 p-0"></button>
           </div>
           <button @click="showThemes = !showThemes" type="button" class="btn btn-outline-secondary position-relative" ><i class="bi bi-brush"></i></button>
         </li>
@@ -96,6 +96,7 @@ export default {
   &.opened {
     button {
       opacity: 1;
+      border-radius: 50%;
       &:nth-child(1) {
         transform: translateY(50px);
       }
@@ -107,6 +108,15 @@ export default {
       }
       &:nth-child(4) {
         transform: translateY(200px);
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
+        transform-origin: right;
       }
     }
   }
