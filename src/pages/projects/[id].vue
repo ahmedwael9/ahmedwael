@@ -76,7 +76,7 @@ export default {
     let x = jsonen.myProjects.find(item => item.id == this.$route.params.id);
     console.log(x)
     this.data=jsonen
-    this.project=jsonar.myProjects
+    this.project=jsonen.myProjects
     
   },
 }

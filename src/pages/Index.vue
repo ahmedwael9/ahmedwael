@@ -28,7 +28,7 @@
     </div>
     <div class="row text-center my-5">
 
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-6 col-md-3 my-2">
         <div class="cardser card p-3">
          <div class=""><i class="bi fs-1 bi-laptop"></i></div>
           <div class="card-body">
@@ -37,7 +37,7 @@
            </div>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-6 col-md-3 my-2">
          <div class="cardser card p-3">
          <div class=""><i class="bi fs-1 bi-tablet"></i></div>
           <div class="card-body">
@@ -46,7 +46,7 @@
            </div>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-6 col-md-3 my-2">
          <div class="cardser card p-3">
          <div class=""><i class="bi fs-1 bi-brush"></i></div>
           <div class="card-body">
@@ -55,7 +55,7 @@
            </div>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-6 col-md-3 my-2">
          <div class="cardser card p-3" >
          <div class=""><i class="bi fs-1 bi-people"></i></div>
           <div class="card-body">
@@ -88,7 +88,7 @@
            <h3 class="text-uppercase">{{data.intro_exp}}</h3>
           </div>
         <div class="row py-5">
-         <div v-for="exp in EXPERIENCE" :key="exp.id" class="col-6 col-sm-12 col-md-6 mt-1 ">
+         <div v-for="exp in EXPERIENCE" :key="exp.id" class="col-12 col-sm-12 col-md-6 mt-1 ">
            <div class="excard card p-4">
           <h4 class="fw-bold">{{exp.title}}</h4>
           <h6 class=" fw-normal">{{exp.comp}}</h6>
@@ -111,7 +111,7 @@
       <h3 class="text-uppercase">{{data.intro_mywork}}</h3>
       </div>
       <div class="row ">
-        <div v-for="work in project" :key="work.id" class="col-6 col-sm-6 col-md-4">
+        <div v-for="work in project" :key="work.id" class="col-12 col-sm-6 col-md-4 my-2">
          <div class="card">
           <div  :style="`backgroundImage: url(${work.image})`" class="card-img-top"></div>
           <div class="cardbody card-body">
@@ -152,6 +152,7 @@
 
 <script>
 import jsonen from '@/lang/en.json'
+
 export default {
   metaInfo: {
     title: 'Index'
@@ -163,6 +164,8 @@ export default {
       EXPERIENCE:jsonen.work_exp,
       isTheme:true
     }
+  },
+  components:{
   },
 
    methods: {
@@ -182,7 +185,7 @@ export default {
 
 .excard:hover{
   transform: scale(1.05);
-  box-shadow: 3px 3px rgb(153, 153, 153);
+  box-shadow: 0px 5px 15px rgb(153, 153, 153);
 }
 
 .box-area{

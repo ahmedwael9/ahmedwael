@@ -7,7 +7,7 @@
     <a class="navbar-brand " href="#">
       <div class="">
           <g-link class="link" to="/">
-            <h3 class="themetext logo  fs-4 fw-bolder" >AHMAD WAEL</h3>
+            <h3  class="logo fs-4 fw-bolder" >AHMAD WAEL</h3>
             <div class=" logo-des fs-7 fw-lighter">FullStack Developer</div>
           </g-link>
       </div>
@@ -28,35 +28,28 @@
           <a id="lang" class=" nav-link " href="#">{{data.navbar_language}}</a>
         </li>
         
-         <li id="theme" class="nav-item visually-hidden">
-           <div class="nav-link bg-light mx-3" id="chang">
-            <div class="d-flex align-items-center">
-             <div class=""><button  type="button" class="btn btn-secondary p-2 mx-1"></button></div>
-             <div class=""><button  type="button" class="btn btn-primary p-2 mx-1"></button></div>
-             <div id="warning"><button  type="button" class="btn btn-warning p-2 mx-1"></button></div>
-             <div class=""><button  type="button" class="btn btn-danger p-2 mx-1"></button></div>
-            </div>
-          </div>
-        </li> 
-        
+       <div id="colors" class="colors visually-hidden">
+        <ul class="d-flex">
+          <li><button type="button" class="mx-1 p-2 btn btn-danger"></button></li>
+          <li><button type="button" class="mx-1 p-2 btn btn-primary"></button></li>
+          <li><button type="button" class="mx-1 p-2 btn btn-warning"></button></li>
+          <li><button type="button" class="mx-1 p-2 btn btn-secondary"></button></li>
+        </ul>
+       </div>
+       
         <li class="nav-item">
-          <div>
-           <button v-if="isTheme==true" type="button" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-brush"></i></button>
-          <button v-else  type="button" class="btnth nav-link btn btn-outline-secondary h-100 "><i class="bi bi-x"></i></button> 
-         
-          </div>
+          <button v-if="toggle" @click="open" type="button" class="btn btn-outline-secondary"><i class="bi bi-brush"></i></button>
+          <button  v-else type="button" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i></button>
         </li>
-
+        
       </ul>
     </div>
   </div>
 </nav>
 </header>
-
     <slot/>
 
     <footer class="">
-
       <div class="container-fluid p-5 text-center ">
       <div class="container">
         <div class="d-flex justify-content-center">
@@ -81,22 +74,38 @@ export default {
   },
   data() {
     return {
-      isTheme:true,
+      toggle:true,
+      isActive: true,
+      hasError: false,
+      isTheme:"text-dark",
       data: jsonen,
     }
+  },
+   methods: {
+    open(){
+      document.getElementById("colors").classList.remove("visually-hidden");
+    }
+     
   },
 }
 </script>
 
 <style>
+.colors{
+  transition: 0.7s;
+}
 
 .link , .link:hover{
    text-decoration: inherit;
    color: inherit;
    cursor: auto;
 }
+li{
+  list-style: none;
+}
+ 
 .navbar{
-  /* background:#6AD6DE !important ; */
+  background:#FFFFFF !important ;
   position: fixed;
   width: 100%;
 }
@@ -110,6 +119,5 @@ footer{
   top: 0;
   z-index: 1;
 }
-
 
 </style>
