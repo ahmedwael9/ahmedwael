@@ -16,7 +16,7 @@
     <div class="col-12 col-sm-4 flex-fill " >
       <h1 data-text="AHMED ABU DAQQA" class="fw-bold ">AHMED ABU DAQQA</h1>
       <p class=" fs-4">{{data.intro_description}}</p>
-      <button  type="button" class="btn themebtn btn-secondary px-5">{{data.intro_buttonresume}}</button>
+      <button  type="button" :class="`btn-${currentTheme}`" class="btn px-5">{{data.intro_buttonresume}}</button>
     </div>
     <div class="col-12 col-sm-4 flex-fill py-4">
       <g-image src="/images/Untitled-1.svg" height="400" width="800" class="w-100 position-relative"></g-image>
@@ -70,7 +70,7 @@
   </section>
 
   <section class="position-relative my-5">
-    <div class="themebg container-fluid">
+    <div :class="`bg-${currentTheme}`" class="container-fluid">
 
        <div class="container">
         
@@ -119,7 +119,7 @@
             <h5 class="text-uppercase card-title">{{work.title}}</h5>
            <p class="card-text">{{work.description}}</p>
            </div>
-           <g-link :to="`/projects/${work.id}`" class="themebtn seeprofile btn btn-secondary mt-4">{{data.projects_seemore}}</g-link>
+           <g-link :to="`/projects/${work.id}`" :class="`btn-${currentTheme}`" class="seeprofile btn mt-4">{{data.projects_seemore}}</g-link>
            </div>
         </div>
         </div>
@@ -152,11 +152,13 @@
 
 <script>
 import jsonen from '@/lang/en.json'
+import themeMixin from '@/mixin/theme'
 
 export default {
   metaInfo: {
     title: 'Index'
   },
+   mixins:[themeMixin],
   data() {
     return {
       data: jsonen,

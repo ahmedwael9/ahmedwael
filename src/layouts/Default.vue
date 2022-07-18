@@ -7,7 +7,7 @@
     <a class="navbar-brand " href="#">
       <div class="">
           <g-link class="link" to="/">
-            <h3  class="logo fs-4 fw-bolder" >AHMAD WAEL</h3>
+            <h3 :class="`text-${currentTheme}`" class="logo fs-4 fw-bolder" >AHMAD WAEL</h3>
             <div class=" logo-des fs-7 fw-lighter">FullStack Developer</div>
           </g-link>
       </div>
@@ -30,13 +30,13 @@
         
        <div id="colors" class="colors visually-hidden">
         <ul class="d-flex">
-          <li><button type="button" class="mx-1 p-2 btn btn-danger"></button></li>
-          <li><button type="button" class="mx-1 p-2 btn btn-primary"></button></li>
-          <li><button type="button" class="mx-1 p-2 btn btn-warning"></button></li>
-          <li><button type="button" class="mx-1 p-2 btn btn-secondary"></button></li>
+          <li><button @click="setTheme('danger')" type="button" class="mx-1 p-2 btn btn-danger"></button></li>
+          <li><button @click="setTheme('primary')" type="button" class="mx-1 p-2 btn btn-primary"></button></li>
+          <li><button @click="setTheme('warning')" type="button" class="mx-1 p-2 btn btn-warning"></button></li>
+          <li><button @click="setTheme('secondary')" type="button" class="mx-1 p-2 btn btn-secondary"></button></li>
         </ul>
        </div>
-       
+
         <li class="nav-item">
           <button v-if="toggle" @click="open" type="button" class="btn btn-outline-secondary"><i class="bi bi-brush"></i></button>
           <button  v-else type="button" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i></button>
@@ -49,7 +49,7 @@
 </header>
     <slot/>
 
-    <footer class="">
+    <footer :class="`bg-${currentTheme}`" class="">
       <div class="container-fluid p-5 text-center ">
       <div class="container">
         <div class="d-flex justify-content-center">
@@ -67,17 +67,20 @@
 </template>
 <script>
 import jsonen from '@/lang/en.json'
+import themeMixin from '@/mixin/theme'
 
 export default {
   metaInfo: {
     title: 'header'
   },
+
+  mixins:[themeMixin],
+
   data() {
     return {
       toggle:true,
       isActive: true,
       hasError: false,
-      isTheme:"text-dark",
       data: jsonen,
     }
   },
