@@ -4,11 +4,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import Vuex  from 'vuex'
 import store  from '@/store'
-
-// import bootstrap from "bootstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
-// import Bootstrap from "bootstrap/dist/js/bootstrap.min.js"
-
+import "@/assets/app.scss"
 import "bootstrap-icons/font/bootstrap-icons.css"
 
 export default function (Vue, { router, head, isClient,appOptions }) {

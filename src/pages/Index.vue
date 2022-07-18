@@ -70,7 +70,7 @@
   </section>
 
   <section class="position-relative my-5">
-    <div :class="`bg-${currentTheme}`" class="container-fluid">
+    <div :class="`bg-${currentTheme}-light`" class="container-fluid">
 
        <div class="container">
         
@@ -313,10 +313,6 @@ input[type=number]:focus,
     transform:scale(1.05) ;
   }
 }
-.container-fluid{
-  background-color: rgb(226, 226, 226);
-}
-
 
 .container{
   max-width: 1000px;
