@@ -1,42 +1,7 @@
 <template>
   <Layout>
     <div>
-      <v-container>
-    <v-row no-gutters>
-      <v-col
-       class="pa-2 align-self-center"
-        cols="12"
-        sm="6"
-      >
-      <h2 >HELLO, I AM AHMED WAEL</h2>
-      <p>
-        Productive Front End developer for Web and Mobile Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.
-      </p>
-      <div>
-    <v-btn
-      rounded
-      dark
-    >
-      MY WORK
-    </v-btn>
-    <v-btn
-      outlined
-      rounded
-      class="mx-1"
-    >
-      SHOW RESUM
-    </v-btn>
-  </div>
-      </v-col>
-      <v-col
-        class="align-self-cente"
-        cols="12"
-        sm="6"
-      >
-      <div id="box"></div>
-      </v-col>
-    </v-row>
-  </v-container>
+<Intro />
 <!--  
   <v-container>
   <div  class="slidercontainer">
@@ -143,9 +108,10 @@
 <script>
 
 import WhatIDo from "../components/WhatIDo"
+import Intro from "../components/Intro"
 export default {
   
-  components: { WhatIDo },
+  components: { WhatIDo,Intro },
   name: 'Homepage',
   metaInfo: {
     title: 'Ahmad Wael - Portfolio'

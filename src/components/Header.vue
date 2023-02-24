@@ -4,9 +4,8 @@
   <v-app-bar
   class="px-16"
   absolute
+  elevation="0"
       color="white"
-      elevate-on-scroll
-      scroll-target="#scrolling-techniques-7"
     >
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
