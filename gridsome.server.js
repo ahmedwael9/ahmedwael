@@ -4,9 +4,19 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-const fs = require('fs')
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = function (api) {
+  api.chainWebpack((config, { isServer }) => {
+    if (isServer) {
+      config.externals([
+        nodeExternals({
+          whitelist: [/^vuetify/]
+        })
+      ])
+    }
+  })
+  
   api.loadSource(({ addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   })
@@ -14,15 +24,4 @@ module.exports = function (api) {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
-
-  
-  api.afterBuild(({ redirects }) => {
-    if (redirects) {
-      let rules = []
-      for (const rule of redirects) {
-        rules.push(`${rule.from}\t${rule.to}\t${rule.status}`)
-      }
-      fs.appendFileSync('./dist/_redirects', rules.join('\n'))
-    }
-  }) 
 }

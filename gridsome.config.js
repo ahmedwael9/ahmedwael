@@ -1,11 +1,30 @@
-// This is where project configuration and plugin options are located.
+// This is where project configuration and plugin options are located. 
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteUrl: 'https://ahmadwael.com',
-  plugins: []
+  siteName: 'About me',
+  siteUrl: 'https://nirusdee.github.io',
+  pathPrefix: '/gridsome-vuetify',
+  plugins: [
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "articles/**/*.md",
+        typeName: "Article",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        }
+      }
+    },
+  ],
+  transformers: {
+    remark: {
+      plugins: ["@gridsome/remark-prismjs"]
+    }
+  }
 }
