@@ -1,6 +1,6 @@
 <template>
    <v-container class="my-10">
-     <div class="text-center">
+     <div class="py-10 text-center">
       <h3>What I Can Do</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit quos voluptates nostrum ex</p>
      </div>

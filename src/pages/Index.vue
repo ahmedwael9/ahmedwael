@@ -2,21 +2,7 @@
   <Layout>
     <div>
 <Intro />
-<!--  
-  <v-container>
-  <div  class="slidercontainer">
-    <div style="background-image: url('/images/9.png') ;">
-    </div>
-    <div  style="background-image: url('/images/171.png') ;">
-    </div>
-    <div  style="background-image: url('/images/170.png') ;">
-    </div>
-    <div style="background-image: url('/images/Screenshot (9).png') ;">
-    </div>
-    <div style="background-image: url('/images/ah.jpg');">
-    </div>
-  </div>
-</v-container> -->
+
 
  <WhatIDo />
   <!-- 575651 -->
@@ -97,7 +83,27 @@
       </v-col>
     </v-row>
 </v-container>
+
+
 </div>
+<!--  
+  <v-container>
+  <div  class="slidercontainer">
+    <div style="background-image: url('/images/9.png') ;">
+    </div>
+    <div  style="background-image: url('/images/171.png') ;">
+    </div>
+    <div  style="background-image: url('/images/170.png') ;">
+    </div>
+    <div style="background-image: url('/images/Screenshot (9).png') ;">
+    </div>
+    <div style="background-image: url('/images/ah.jpg');">
+    </div>
+  </div>
+</v-container> -->
+
+<ContactMe />
+<WaveAnimation />
 <!-- <div style="background-color: orange;min-height: 100vh;" class=""></div>
 <div style="background-color: grey;min-height: 100vh;" class=""></div> -->
 
@@ -109,9 +115,11 @@
 
 import WhatIDo from "../components/WhatIDo"
 import Intro from "../components/Intro"
+import ContactMe from "../components/ContactMe"
+import WaveAnimation from "../components/WaveAnimation"
 export default {
   
-  components: { WhatIDo,Intro },
+  components: { WhatIDo,Intro,ContactMe,WaveAnimation },
   name: 'Homepage',
   metaInfo: {
     title: 'Ahmad Wael - Portfolio'

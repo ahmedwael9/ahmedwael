@@ -1,12 +1,15 @@
 <template>
-        <v-container>
-    <v-row no-gutters>
+      <v-container class="px-16">
+      <v-row >
       <v-col
-       class="pa-2 align-self-center"
+       class="align-self-center"
         cols="12"
         sm="6"
       >
-      <h2 >HELLO, I AM AHMED WAEL</h2>
+      <div>
+        <div class="containeranimation">
+        <div class="typewriter">HELLO, I AM AHMED WAEL</div>
+      </div>
       <p>
         Productive Front End developer for Web and Mobile Apps, builds exceptional UI designs with awesome animations, focusing on the quality in the first place.
       </p>
@@ -25,17 +28,23 @@
       SHOW RESUM
     </v-btn>
   </div>
+      </div>
       </v-col>
       <v-col
-        class="align-self-cente"
         cols="12"
         sm="6"
       >
-      <div id="box"></div>
+        <div id="box"></div>
     <!-- <canvas width="960" height="600" ></canvas> -->
       </v-col>
     </v-row>
-  </v-container>
+        </v-container>
+  <!-- <div class="custom-shape-divider-bottom-1677242913">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div> -->
+  
 </template>
 
 <script>
@@ -129,33 +138,65 @@ canvas{
 }
 
 body {
-  animation: stars 205s linear alternate;
+
+animation: stars 205s linear alternate;
 }
 
 #box {
-  background:url("https://www.pngkit.com/png/detail/36-364227_contact-digital-world-map-png.png");
-  background-size:cover;
-  border:2px solid #000;
-  border-radius:50%;
-  width:200px;
-  height:200px;
-  animation: movimiento 5s linear 0s infinite;
-  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
-             -8px -8px 15px #000 inset,
-             2px 2px 25px #000 inset,
-             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
-             25px 25px 45px RGBA(0,0,0, 0.45) inset;
-  margin:6em auto;
-  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+background:url(https://www.pngkit.com/png/detail/36-364227_contact-digital-world-map-png.png);
+background-size:cover;
+border:2px solid #000;
+border-radius:50%;
+width:200px;
+height:200px;
+animation: movimiento 5s linear 0s infinite;
+box-shadow:0 0 25px RGBA(255,200,200, 0.10),
+           -8px -8px 15px #000 inset,
+           2px 2px 25px #000 inset,
+           -45px -45px 25px RGBA(0,0,0, 0.05) inset, 
+           25px 25px 45px RGBA(0,0,0, 0.05) inset;
+margin:6em auto;
+transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
 }
 
 @keyframes movimiento {
-  0% { background-position:0 0 }
-  100% { background-position:355px 0 }
+0% { background-position:0 0 }
+100% { background-position:355px 0 }
 }
 
 @keyframes stars {
-  0% { background-position:0 0 }
-  100% { background-position:0 100% }
+0% { background-position:0 0 }
+100% { background-position:0 100% }
+}
+.containeranimation {
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 2.1vw, 3rem);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.typewriter {
+	width: 21.5ch;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid #919191;
+	animation: cursor 1s step-start infinite, 
+    text 5s steps(18) alternate infinite;
+}
+
+@keyframes cursor {
+	0%, 100% { 
+    border-color: #9E9E9E; 
+  }
+}
+
+@keyframes text {
+	0% { 
+    width: 0; 
+  }
+	100% { 
+    width: 23.5ch; 
+  }
 }
 </style>

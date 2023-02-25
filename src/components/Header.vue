@@ -7,17 +7,18 @@
   elevation="0"
       color="white"
     >
-      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
-      <v-toolbar-title>AHMED</v-toolbar-title>
+      <v-toolbar-title class="font-weight-bold">AHMED WAEL</v-toolbar-title>
       <v-spacer/>
 
       <v-btn text>
       HOME
     </v-btn>
-      <v-btn text>
+    <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><g transform="translate(0 24) scale(1 -1)"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10a5 5 0 0 1 0 10Z"/></g></svg>
+    <v-btn text>
         CONTACT ME
     </v-btn>
+    <svg style="width: 15px;" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><g transform="translate(0 24) scale(1 -1)"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10a5 5 0 0 1 0 10Z"/></g></svg>
       <v-btn text>
       MY PROJECTS
     </v-btn>
@@ -28,58 +29,16 @@
     <v-btn
       rounded
       dark
-      @click="$vuetify.theme.dark=true"
+      @click="$vuetify.theme.dark=toggle()"
     >
       KEEP IN TOUCH
     </v-btn>
   </div>
-
-      <!-- <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn> -->
     </v-app-bar>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-
-
-</static-query>
 
 <script>
 export default {
@@ -88,21 +47,14 @@ export default {
   
   data() {
     return {
-      drawer: false,
-      group: null,
-      collapse: false,
-      items: [
-        { title: "Home", icon: "fa-home", path: "/about" },
-        { title: "About", icon: "fa-user-astronaut", path: "/about" },
-        { title: "Articles", icon: "fa-newspaper", path: "/articles" },
-        { title: "Contact", icon: "fa-envelope", path: "/contact" }
-      ],
-      mini: false
+      collapse:false
+      
     };
   },
   methods: {
     toggle() {
       this.collapse = !this.collapse;
+      return this.collapse
     }
   }
 };

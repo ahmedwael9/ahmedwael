@@ -1,6 +1,10 @@
 <template>
   <v-app>
-  <v-app-bar app>
+  <v-app-bar app
+  class="px-16"
+  elevation="0"
+      color="white"
+  >
     <Header  />
   </v-app-bar>
 
