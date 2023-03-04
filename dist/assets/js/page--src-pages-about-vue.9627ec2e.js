@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{odGf:function(t,n,o){"use strict";o.r(n);var e={name:"Homepage",metaInfo:{title:"Ahmad Wael - Portfolio"}},a=o("KHd+"),l=Object(a.a)(e,(function(){var t=this._self._c;return t("Layout",[t("v-container",[t("h1",[this._v("about")])])],1)}),[],!1,null,null,null);n.default=l.exports}}]);

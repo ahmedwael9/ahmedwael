@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{w981:function(t,n,e){"use strict";e.r(n);var a={name:"ContactPage",metaInfo:{title:"Contact me"}},o=e("KHd+"),c=Object(o.a)(a,(function(){var t=this._self._c;return t("Layout",[t("v-container",[t("h1",[this._v("Contact Me")])])],1)}),[],!1,null,null,null);n.default=c.exports}}]);
