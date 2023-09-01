@@ -88,7 +88,5 @@
   background-color:  rgba(255, 170, 43, 0.293);
 }
 
-.my-component {
-  // Your component-specific styles
-}
+
 </style>
