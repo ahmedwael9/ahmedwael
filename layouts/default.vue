@@ -71,7 +71,6 @@
 </script>
 
 <style lang="scss">
-@import '../assets/styles/main.scss';
 
 .logo::after{
   content: '';
