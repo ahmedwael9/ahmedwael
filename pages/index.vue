@@ -128,7 +128,5 @@ const projects=[
     color: rgb(255,169,43) !important;;
   }
  }
- .slide1{
-  
- }
+
 </style>
