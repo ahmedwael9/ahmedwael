@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;800&family=Tajawal:wght@400;500&display=swap');
+
+$primary-color: #007bff;
+
+body {
+  background-color: #fcfcfc;
+  font-family: 'Almarai', sans-serif;
+}
+
+.button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
