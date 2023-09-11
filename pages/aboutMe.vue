@@ -59,7 +59,7 @@
     <div v-for="n in 3">
         <div class="d-flex align-items-center">
             <!-- <div style="height: 4px;width: 40px;background-color: #6D9886;"></div> -->
-            <div class="card-info mb-3 p-4" style="background-color: #F7F7F7;border-radius: 120px;">
+            <div class="card-info mb-3 p-4" style="background-color: #F7F7F7">
                 <ul>
                     <li>
                         <div class="fw-bold" style="text-transform: uppercase;">Tahaluf Elamarat Company</div>
@@ -79,6 +79,8 @@
 
 .card-info{
     transition: 0.3s;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 @keyframes movimiento {
