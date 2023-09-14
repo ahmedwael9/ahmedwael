@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="service-section">
+    <div class="py-5 service-section">
       <div class="py-5 container">
         <div>
           <div class="text-center">
             <h4 style="color: #393e46" class="fw-bold m-0" @click="changeLanguage">
-              SERVISES
+              {{ $t("service") }}
             </h4>
             <div class="fs-6 text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing
+              {{ $t("lorem") }}
             </div>
           </div>
           <div class="row justify-content-center">
@@ -41,53 +41,45 @@
         </div>
       </div>
     </div>
-    <div class="py-5">
-      <div>
-        <div v-for="(project, index) in projects">
-          <div class="" :style="{ backgroundColor: project.bgColor }">
-            <div class="container position-relative">
+    <div class="pb-5">
+      <div class="container">
+        <div
+          v-for="(project, index) in projects"
+          class="mb-4"
+          :style="{ backgroundColor: project.bgColor }"
+        >
+          <div class="container position-relative">
+            <div class="row align-items-center">
               <div
-                class="row align-items-center"
-                style="
-                  background-image: url('../assets/images/Background.svg');
-                  background-size: cover;
-                  height: 100vh;
-                "
+                :class="{ 'order-1 ': index % 2 != 0, 'text-light': project.textLight }"
+                class="col-12 col-md-6 p-5"
               >
-                <div
-                  :class="{ 'order-1 ': index % 2 != 0, 'text-light': project.textLight }"
-                  class="col-12 col-md-6"
-                >
-                  <div class="fs-1 fw-bold">
-                    {{ project.name }}
-                  </div>
-                  <p>
-                    {{ project.desrciption }}
-                  </p>
-                  <div
-                    class="btn px-5"
-                    @click="$router.push(`/details/${project.id}`)"
-                    :class="
-                      project.textLight
-                        ? 'btn-outline-light text-white'
-                        : 'btn-outline-dark text-dark'
-                    "
-                    type="button"
-                  >
-                    View Details
-                  </div>
+                <div class="fs-1 fw-bold">
+                  {{ project.name }}
                 </div>
-                <div class="col-12 col-md-6">
-                  <div class="position-relative">
-                    <img
-                      style="width: 100%; background-size: contain"
-                      src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
-                    />
-                    <div
-                      class="bg-white circle-project p-3"
-                      style="position: absolute; top: -40px; right: -20px"
-                    ></div>
-                  </div>
+                <p>
+                  {{ project.desrciption }}
+                </p>
+                <div
+                  class="btn px-5"
+                  @click="$router.push(`/details/${project.id}`)"
+                  :class="
+                    project.textLight
+                      ? 'btn-outline-light text-white'
+                      : 'btn-outline-dark text-dark'
+                  "
+                  type="button"
+                >
+                  View Details
+                </div>
+              </div>
+              <div class="col-12 col-md-6 px-0 mx-0">
+                <div style="overflow: hidden">
+                  <img
+                    class="img-product"
+                    style="width: 100%; background-size: contain"
+                    src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
+                  />
                 </div>
               </div>
             </div>
@@ -136,6 +128,26 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
+// .container-projects {
+//   height: 100vh; /* Make it full-screen height */
+//   overflow-y: scroll; /* Enable vertical scrolling */
+//   scroll-snap-type: y mandatory; /* Mandatory scroll snap behavior */
+//   position: relative; /* Ensure proper positioning */
+// }
+// .slides {
+//   height: 100vh;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   scroll-snap-align: start;
+// }
+
+.img-product {
+  transition: 0.3s;
+}
+.img-product:hover {
+  transform: scale(1.1) translateY(-20px);
+}
 .front,
 .back {
   position: absolute;
@@ -204,9 +216,19 @@ onMounted(() => {
 .service-section {
   background-image: url("/assets/images/bg.svg"), url("/assets/images/bg.svg"),
     url("/assets/images/bg.svg");
+  //   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right bottom, 200px top, 100px bottom;
+  animation: animatedBackground 10s linear infinite alternate;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: right bottom, 200px top, 100px bottom;
+  }
+  to {
+    background-position: 1200px bottom, -50px top, 100px 300px;
+  }
 }
 
 @keyframes mymove {

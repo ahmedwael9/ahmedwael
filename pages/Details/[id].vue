@@ -22,7 +22,7 @@
           {{ project?.desrciption }}
         </div>
       </div>
-      <div class="col-12 col-md-5">
+      <div class="col-12 col-md-5 py-2">
         <img
           style="width: 100%; background-size: contain"
           src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
@@ -64,19 +64,19 @@
       </div>
     </div>
     <div class="row py-5 justify-content-between align-items-center h-100">
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 py-1">
         <img
           style="width: 100%; background-size: contain"
           src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
         />
       </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 py-1">
         <img
           style="width: 100%; background-size: contain"
           src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
         />
       </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 py-1">
         <img
           style="width: 100%; background-size: contain"
           src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"

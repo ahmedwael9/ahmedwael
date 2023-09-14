@@ -1,6 +1,11 @@
 <template>
   <div class="container py-5" style="min-height: 100vh">
     <div class="d-flex align-items-center">
+      <div class="">
+        <div
+          style="height: 16px; width: 16px; background-color: #6d9886; border-radius: 50%"
+        ></div>
+      </div>
       <div class="" style="height: 4px; width: 100%; background-color: #6d9886"></div>
       <div class="">
         <div
