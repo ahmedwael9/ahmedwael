@@ -6,14 +6,94 @@
                 "name":"UOP CENTER",
                 "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?",
                 "bgColor":"#252525",
-                "textLight":true
+                "textLight":true,
+                "images":[
+                    "https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                    "https://img.freepik.com/premium-psd/digital-devices-screen-editable_24972-2051.jpg",
+                    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/80a2bb126031567.612542339630e.png"
+                ],
+                "mainImage":"https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                "languages":[
+                    {
+                        "name":"Html",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":1
+                    },
+                    {
+                        "name":"JavaScript",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":5
+                    },
+                    {
+                        "name":"Scss",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":5
+                    },
+                    {
+                        "name":"Vue JS",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":21
+                    }
+                ],
+                "slider":[
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"Website display consistency across different devices",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    },
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"Safe for visitors and well protected against hacking",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    },
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"Safe for visitors and well protected against hacking",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    }
+                ]
             },
             {   
                 "id":2,
                 "name":"BNT ALKHALEJ",
                 "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?",
                 "bgColor":"#f2e7d5",
-                "textLight":false
+                "textLight":false,
+                "images":[
+                    "https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                    "https://img.freepik.com/premium-psd/digital-devices-screen-editable_24972-2051.jpg",
+                    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/80a2bb126031567.612542339630e.png"
+                ],
+                "mainImage":"https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                "languages":[
+                    {
+                        "name":"JavaScript",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":12
+                    },
+                    {
+                        "name":"Scss",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":3
+                    },
+                    {
+                        "name":"Vue",
+                        "desrciption":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis",
+                        "ratio":5
+                    }
+                ],
+                "slider":[
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"Website display consistency across different devices",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    },
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"Website display consistency across different devices",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    }
+                ]
             }
         ],
     "services":

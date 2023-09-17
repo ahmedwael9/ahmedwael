@@ -8,27 +8,27 @@
     </div>
     <div class="row justify-content-center mt-3 mx-0">
       <div class="col-8">
-        <form @submit.prevent="submitForm">
+        <form class="needs-validation" @submit.prevent="submitForm" novalidate>
           <div>
             <input
               v-model="formData.email"
-              type="text"
+              type="email"
               class="form-control"
               id="validationCustom01"
               required
             />
-            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid email.</div>
           </div>
           <div class="mt-2">
             <textarea
-              v-model="formData.desription"
+              v-model="formData.description"
               type="textarea"
-              row="12"
+              rows="8"
               class="form-control"
               id="validationCustom02"
               required
             ></textarea>
-            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a description.</div>
           </div>
           <div class="text-center mt-3">
             <button
@@ -44,26 +44,37 @@
     </div>
   </div>
 </template>
+
 <script setup>
+import { ref } from "vue";
+
 const formData = ref({
   email: "",
-  desription: "",
+  description: "",
 });
 
 const submitForm = async () => {
-  const response = await fetch("https://formspree.io/f/mlezryoz", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData.value),
-  });
-  if (response.ok) {
-    // Handle successful form submission (e.g., show a success message)
-    console.log("Form submitted successfully");
+  const form = document.querySelector(".needs-validation");
+
+  if (form.checkValidity()) {
+    const response = await fetch("https://formspree.io/f/mlezryoz", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData.value),
+    });
+
+    if (response.ok) {
+      // Handle successful form submission (e.g., show a success message)
+      console.log("Form submitted successfully");
+    } else {
+      // Handle form submission error (e.g., show an error message)
+      console.error("Form submission failed");
+    }
   } else {
-    // Handle form submission error (e.g., show an error message)
-    console.error("Form submission failed");
+    // Form is not valid, you can handle this case as needed
+    console.error("Form is not valid");
   }
 };
 </script>

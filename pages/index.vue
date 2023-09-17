@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="shadow" :style="shadowStyle"></div>
     <div class="py-5 service-section">
       <div class="py-5 container">
         <div>
@@ -115,22 +114,11 @@ import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
 
-const shadowStyle = ref({
-  left: "0px",
-  top: "0px",
-});
-
-const updateShadowPosition = (event) => {
-  shadowStyle.value.left = event.pageX + "px";
-  shadowStyle.value.top = event.pageY + "px";
-};
-
 onMounted(() => {
   AOS.init({
     offset: 200, // Offset (in pixels) from the top of the page to trigger animations
     duration: 800, // Duration (in milliseconds) of the animation
   });
-  document.addEventListener("mousemove", updateShadowPosition);
 });
 
 const changeLanguage = () => {

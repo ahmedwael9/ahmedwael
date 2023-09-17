@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="py-5">
-      <carousel :autoplay="2000" :wrap-around="true" :items-to-show="1">
-        <slide v-for="slide in 4" :key="slide">
+    <div class="py-4">
+      <carousel :autoplay="3000" :wrap-around="true" :items-to-show="1">
+        <slide v-for="slide in project?.slider" :key="slide">
           <div
             class="row align-items-center justify-content-center p-none p-md-5"
             style="
@@ -22,10 +22,10 @@
               <div class="col-10">
                 <div class="text-white">
                   <h1 class="fw-bold" style="text-transform: uppercase">
-                    Website display consistency across different devices
+                    {{ slide.title }}
                   </h1>
                   <div class="">
-                    {{ project?.desrciption }}
+                    {{ slide?.desrciption }}
                   </div>
                 </div>
               </div>
@@ -61,13 +61,13 @@
         </div>
       </div>
       <div class="col-12 col-md-5 py-2">
-        <img
-          style="width: 100%; background-size: contain"
-          src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
-        />
+        <img style="width: 100%; background-size: contain" :src="project?.mainImage" />
       </div>
     </div>
-    <div class="py-5" style="background-color: #f7f7f7; border-radius: 8px">
+    <div
+      class="py-5 proparity-section"
+      style="background-color: #f7f7f7; border-radius: 6px"
+    >
       <div class="row align-items-center justify-content-center">
         <div class="col-12 col-md-5">
           <div class="text-center" style="width: 100%; height: 400px">
@@ -76,49 +76,19 @@
         </div>
         <div class="col-12 col-md-5">
           <ul>
-            <li>
+            <li v-for="language in project?.languages" class="mb-3">
               <div class="fw-bold fs-5" style="text-transform: uppercase; color: #393e46">
-                JavaScript Language
+                {{ language.name }}
               </div>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores
-              obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis
-            </li>
-            <li class="py-2">
-              <div class="fw-bold fs-5" style="text-transform: uppercase; color: #393e46">
-                Html
-              </div>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores
-              obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis
-            </li>
-            <li class="py-2">
-              <div class="fw-bold fs-5" style="text-transform: uppercase; color: #393e46">
-                scss
-              </div>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolores
-              obcaecati beatae soluta! Magnam, distinctio blanditiis. Perspiciatis
+              {{ language.desrciption }}
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="row py-5 justify-content-between align-items-center h-100">
-      <div class="col-12 col-md-4 py-1">
-        <img
-          style="width: 100%; background-size: contain"
-          src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
-        />
-      </div>
-      <div class="col-12 col-md-4 py-1">
-        <img
-          style="width: 100%; background-size: contain"
-          src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
-        />
-      </div>
-      <div class="col-12 col-md-4 py-1">
-        <img
-          style="width: 100%; background-size: contain"
-          src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
-        />
+      <div v-for="img in project?.images" class="col-12 col-md-4 py-1">
+        <img style="width: 100%; height: 260px; background-size: cover" :src="img" />
       </div>
     </div>
   </div>
@@ -146,6 +116,11 @@ const fetchData = async () => {
 
 onMounted(() => {
   fetchData();
+  //   let dataRatio = [];
+  //   project?.languages.forEach((element) => {
+  //     dataRatio.push(element.ratio);
+  //   });
+  //   console.log(dataRatio, "================>");
   const ctx = document.getElementById("myChart");
   new Chart(ctx, {
     type: "doughnut",
@@ -177,11 +152,19 @@ watch(
   }
 );
 </script>
-<style>
+<style lang="scss">
 .half-a-border-on-bottom {
   border-bottom: 5px solid;
   border-image: linear-gradient(to right, #f2e7d5 50%, transparent 50%) 100% 1;
 }
+
+.proparity-section {
+  background-image: url("/assets/images/bgCorner.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left top;
+}
+
 .details-section {
   background-image: url("/assets/images/bg.svg"), url("/assets/images/bg.svg"),
     url("/assets/images/bg.svg");
@@ -207,5 +190,12 @@ watch(
 .carousel__pagination-button:hover::after,
 .carousel__pagination-button--active::after {
   background-color: #6d9886;
+}
+
+.proparity-section {
+  background-image: url("/assets/images/bgCorner.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left top;
 }
 </style>

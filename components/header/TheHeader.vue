@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #f7f7f7" class="pb-2">
+  <div style="background-color: #f7f7f7" class="pb-2 header-section">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand m-0" href="#">
@@ -25,10 +25,7 @@
               <a class="nav-link" @click="$router.push('/aboutMe')" href="#">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1">Disabled</a>
+              <a class="nav-link" href="#">Projects</a>
             </li>
           </ul>
         </div>
@@ -366,6 +363,13 @@ onMounted(() => {
   100% {
     background-position: 355px 0;
   }
+}
+
+.header-section {
+  background-image: url("/assets/images/bgCorner.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left top;
 }
 
 .btn-lang {
