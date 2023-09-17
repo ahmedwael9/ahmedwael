@@ -1,10 +1,15 @@
 <template>
   <div>
+    <div class="shadow" :style="shadowStyle"></div>
     <div class="py-5 service-section">
       <div class="py-5 container">
         <div>
           <div class="text-center">
-            <h4 style="color: #393e46" class="fw-bold m-0" @click="changeLanguage">
+            <h4
+              style="color: #393e46; text-transform: uppercase"
+              class="fw-bold m-0"
+              @click="changeLanguage"
+            >
               {{ $t("service") }}
             </h4>
             <div class="fs-6 text-muted">
@@ -45,42 +50,50 @@
       <div class="container">
         <div
           v-for="(project, index) in projects"
-          class="mb-4"
+          class="mb-4 aos-example"
+          :data-aos="index % 2 != 0 ? 'fade-right' : 'fade-left'"
           :style="{ backgroundColor: project.bgColor }"
         >
-          <div class="container position-relative">
-            <div class="row align-items-center">
-              <div
-                :class="{ 'order-1 ': index % 2 != 0, 'text-light': project.textLight }"
-                class="col-12 col-md-6 p-5"
-              >
-                <div class="fs-1 fw-bold">
-                  {{ project.name }}
-                </div>
-                <p>
-                  {{ project.desrciption }}
-                </p>
-                <div
-                  class="btn px-5"
-                  @click="$router.push(`/details/${project.id}`)"
-                  :class="
-                    project.textLight
-                      ? 'btn-outline-light text-white'
-                      : 'btn-outline-dark text-dark'
-                  "
-                  type="button"
-                >
-                  View Details
-                </div>
+          <div class="row m-0 align-items-center">
+            <div
+              :class="{ 'order-1 ': index % 2 != 0, 'text-light': project.textLight }"
+              style="
+                background-size: cover;
+                background-image: url('/assets/images/bgCorner.svg');
+              "
+              class="col-12 col-md-6 p-0 p-5"
+            >
+              <div class="fs-1 fw-bold">
+                {{ project.name }}
               </div>
-              <div class="col-12 col-md-6 px-0 mx-0">
-                <div style="overflow: hidden">
-                  <img
-                    class="img-product"
-                    style="width: 100%; background-size: contain"
-                    src="https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1"
-                  />
-                </div>
+              <p>
+                {{ project.desrciption }}
+              </p>
+              <div
+                class="btn px-5"
+                @click="$router.push(`/details/${project.id}`)"
+                :class="
+                  project.textLight
+                    ? 'btn-outline-light text-white'
+                    : 'btn-outline-dark text-dark'
+                "
+                type="button"
+              >
+                View Details
+              </div>
+            </div>
+            <div class="col-12 col-md-6 p-0">
+              <div style="overflow: hidden">
+                <div
+                  class="img-product"
+                  style="
+                    height: 400px;
+                    background-position: center;
+                    background-size: cover;
+                    width: 100%;
+                    background-image: url('https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1');
+                  "
+                ></div>
               </div>
             </div>
           </div>
@@ -96,9 +109,29 @@
 <script setup>
 import DataEn from "../content/en.json";
 import DataAr from "../content/ar.json";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import the AOS styles
 import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
+
+const shadowStyle = ref({
+  left: "0px",
+  top: "0px",
+});
+
+const updateShadowPosition = (event) => {
+  shadowStyle.value.left = event.pageX + "px";
+  shadowStyle.value.top = event.pageY + "px";
+};
+
+onMounted(() => {
+  AOS.init({
+    offset: 200, // Offset (in pixels) from the top of the page to trigger animations
+    duration: 800, // Duration (in milliseconds) of the animation
+  });
+  document.addEventListener("mousemove", updateShadowPosition);
+});
 
 const changeLanguage = () => {
   const newLocale = locale.value === "en" ? "ar" : "en";
@@ -128,6 +161,25 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
+body {
+  overflow-x: hidden;
+  cursor: auto;
+}
+.shadow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  opacity: 0.4;
+  mix-blend-mode: darken;
+  transition: 0.07s ease;
+  background-color: #333333;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  transform: translate(-50%, -50%);
+}
 // .container-projects {
 //   height: 100vh; /* Make it full-screen height */
 //   overflow-y: scroll; /* Enable vertical scrolling */
@@ -146,7 +198,7 @@ onMounted(() => {
   transition: 0.3s;
 }
 .img-product:hover {
-  transform: scale(1.1) translateY(-20px);
+  transform: scale(1.1);
 }
 .front,
 .back {

@@ -184,7 +184,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-6">
           <div class="w-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,43 @@
 <template>
   <div class="container">
+    <div class="py-5">
+      <carousel :autoplay="2000" :wrap-around="true" :items-to-show="1">
+        <slide v-for="slide in 4" :key="slide">
+          <div
+            class="row align-items-center justify-content-center p-none p-md-5"
+            style="
+              min-height: 440px;
+              background-position: center;
+              background-size: cover;
+              width: 100%;
+              background-image: linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 0.389),
+                  rgba(0, 0, 0, 0.389)
+                ),
+                url('https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1');
+            "
+          >
+            <div style="text-align: start">
+              <div class="col-10">
+                <div class="text-white">
+                  <h1 class="fw-bold" style="text-transform: uppercase">
+                    Website display consistency across different devices
+                  </h1>
+                  <div class="">
+                    {{ project?.desrciption }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </slide>
+        <template #addons>
+          <navigation />
+          <pagination />
+        </template>
+      </carousel>
+    </div>
     <div class="details-section row justify-content-between align-items-center py-5">
       <div class="col-12 col-md-6">
         <div class="">
@@ -89,6 +127,8 @@
 import Chart from "chart.js/auto";
 import DataEn from "../content/en.json";
 import DataAr from "../content/ar.json";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
@@ -148,5 +188,24 @@ watch(
   background-repeat: no-repeat;
   background-size: auto;
   background-position: right bottom, 200px top, 650px 200px;
+}
+
+.carousel__pagination-button {
+  width: 50px;
+  height: 20px;
+  border-radius: 12px;
+}
+.carousel__pagination-button::after {
+  display: block;
+  content: "";
+  width: auto !important;
+  height: var(--vc-pgn-height);
+  border-radius: 20px;
+  background-color: #f2e7d5;
+}
+
+.carousel__pagination-button:hover::after,
+.carousel__pagination-button--active::after {
+  background-color: #6d9886;
 }
 </style>

@@ -8,13 +8,20 @@
     </div>
     <div class="row justify-content-center mt-3 mx-0">
       <div class="col-8">
-        <form>
+        <form @submit.prevent="submitForm">
           <div>
-            <input type="text" class="form-control" id="validationCustom01" required />
+            <input
+              v-model="formData.email"
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
             <div class="valid-feedback">Looks good!</div>
           </div>
           <div class="mt-2">
             <textarea
+              v-model="formData.desription"
               type="textarea"
               row="12"
               class="form-control"
@@ -37,3 +44,26 @@
     </div>
   </div>
 </template>
+<script setup>
+const formData = ref({
+  email: "",
+  desription: "",
+});
+
+const submitForm = async () => {
+  const response = await fetch("https://formspree.io/f/mlezryoz", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData.value),
+  });
+  if (response.ok) {
+    // Handle successful form submission (e.g., show a success message)
+    console.log("Form submitted successfully");
+  } else {
+    // Handle form submission error (e.g., show an error message)
+    console.error("Form submission failed");
+  }
+};
+</script>
