@@ -6,14 +6,89 @@
                 "name":"مركز UOP",
                 "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
                 "bgColor":"#252525",
-                "textLight":true
+                "textLight":true,
+                "images":[
+                    "https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                    "https://img.freepik.com/premium-psd/digital-devices-screen-editable_24972-2051.jpg",
+                    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/80a2bb126031567.612542339630e.png"
+                ],
+                "mainImage":"https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                "languages":[
+                    {
+                        "name":"جافا سكريبت",
+                        "desrciption":"وريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريمضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
+                        "ratio":12
+                    },
+                    {
+                        "name":"Scss",
+                        "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كل ليتصور طرييم يتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
+                        "ratio":3
+                    },
+                    {
+                        "name":"Vue JS",
+                        "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع ا ه ليتصور طريقهيقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
+                        "ratio":5
+                    }
+                ],
+                "slider":[
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"يعرض موقع الويب الاتساق عبر الأجهزة المختلفة",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    },
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"آمن للزوار ومحمي بشكل جيد ضد القرصنة",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    },
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"آمن للزوار ومحمي بشكل جيد ضد القرصنة",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    }
+                ]
             },
             {
                 "id":2,
                 "name":"بنت الخليج",
                 "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
                 "bgColor":"#ffeecb",
-                "textLight":false
+                "textLight":false,
+                "images":[
+                    "https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                    "https://img.freepik.com/premium-psd/digital-devices-screen-editable_24972-2051.jpg",
+                    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/80a2bb126031567.612542339630e.png"
+                ],
+                "mainImage":"https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                "languages":[
+                    {
+                        "name":"جافا سكريبت",
+                        "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
+                        "ratio":12
+                    },
+                    {
+                        "name":"Scss",
+                        "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
+                        "ratio":3
+                    },
+                    {
+                        "name":"Vue",
+                        "desrciption":"وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعهوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه",
+                        "ratio":5
+                    }
+                ],
+                "slider":[
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"يعرض موقع الويب الاتساق عبر الأجهزة المختلفة",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    },
+                    {
+                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "title":"يعرض موقع الويب الاتساق عبر الأجهزة المختلفة",
+                        "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
+                    }
+                ]
             }
         ],
         "services":

@@ -18,15 +18,13 @@
                 url('https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1');
             "
           >
-            <div style="text-align: start">
-              <div class="col-10">
-                <div class="text-white">
-                  <h1 class="fw-bold" style="text-transform: uppercase">
-                    {{ slide.title }}
-                  </h1>
-                  <div class="">
-                    {{ slide?.desrciption }}
-                  </div>
+            <div class="col-10" style="text-align: start">
+              <div class="text-white">
+                <h1 class="fw-bold" style="text-transform: uppercase">
+                  {{ slide.title }}
+                </h1>
+                <div class="">
+                  {{ slide?.desrciption }}
                 </div>
               </div>
             </div>

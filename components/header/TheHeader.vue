@@ -1,10 +1,17 @@
 <template>
-  <div style="background-color: #f7f7f7" class="pb-2 header-section">
-    <nav class="navbar navbar-expand-lg navbar-light">
+  <div
+    :class="{ 'dark-mode': darkMode }"
+    :style="!darkMode ? 'background-color: #f7f7f7' : ''"
+    class="pb-2 header-section app"
+  >
+    <nav
+      class="navbar navbar-expand-lg"
+      :class="darkMode ? 'navbar-dark' : 'navbar-light'"
+    >
       <div class="container">
         <a class="navbar-brand m-0" href="#">
           <div dir="ltr" style="color: #6d9886" class="fw-bold logo">
-            AHMED<span class="text-dark">WAEL</span>
+            AHMED<span :class="darkMode ? 'text-light' : 'text-dark'">WAEL</span>
             <span class="material-icons icon">code</span>
           </div>
         </a>
@@ -163,7 +170,7 @@
       <div class="row py-5 justify-content-center align-items-center h-100">
         <div class="col-12 col-md-6">
           <div class="">
-            <span style="color: #393e46" class="fs-1 fw-bold d-flex"
+            <span :style="darkmode ? 'color: #393e46' : ''" class="fs-1 fw-bold d-flex"
               >I'M
               <span style="color: #6d9886" class="mx-3 fs-1 intro fw-bold d-flex">
                 <span class="">{{ textShow }}</span>
@@ -175,6 +182,7 @@
             <div
               style="background-color: #393e46"
               class="btn px-5 text-light"
+              :class="{ 'btn-light': darkMode }"
               type="button"
             >
               RESUME
