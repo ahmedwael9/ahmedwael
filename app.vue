@@ -29,12 +29,10 @@ onMounted(() => {
   z-index: 1;
   opacity: 0.4;
   mix-blend-mode: darken;
-  transition: 0.07s ease;
-  background-color: #333333;
+  transition: 0.085s ease;
+  border: 2px solid #333333;
   border-radius: 50%;
   pointer-events: none;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px,
-    rgba(17, 17, 26, 0.1) 0px 16px 48px;
   transform: translate(-50%, -50%);
 }
 

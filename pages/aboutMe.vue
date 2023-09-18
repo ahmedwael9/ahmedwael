@@ -6,8 +6,8 @@
           style="height: 16px; width: 16px; background-color: #6d9886; border-radius: 50%"
         ></div>
       </div>
-      <div class="" style="height: 4px; width: 100%; background-color: #6d9886"></div>
-      <div class="">
+      <div style="height: 4px; width: 100%; background-color: #6d9886"></div>
+      <div>
         <div
           class="p-1 bg-circle"
           style="width: 70px; height: 70px; background-color: #bfbfbf; border-radius: 50%"
@@ -69,12 +69,19 @@
     <div class="d-flex align-items-center mb-4 mt-5">
       <div class="w-100">
         <div class="fw-bold" style="text-transform: uppercase; color: #6d9886">
-          Tahaluf Elamarat Company
+          {{ companies[currentSlide]?.name }}
         </div>
-        <div class="w-100 text-dark">Feb 2020 / Oct 2020</div>
+        <div class="w-100 text-dark">
+          {{ companies[currentSlide]?.startDate }}/ {{ companies[currentSlide]?.endDate }}
+        </div>
       </div>
       <div class="d-flex">
         <div
+          @click="
+            () => {
+              currentSlide != 0 ? currentSlide-- : null;
+            }
+          "
           class="p-1 d-flex justify-content-center align-items-center"
           style="width: 45px; height: 45px; border: 1.8px solid black; border-radius: 50%"
         >
@@ -95,7 +102,13 @@
             </svg>
           </div>
         </div>
+
         <div
+          @click="
+            () => {
+              currentSlide < companies.length - 1 ? currentSlide++ : null;
+            }
+          "
           class="p-1 mx-2 d-flex justify-content-center align-items-center"
           style="width: 45px; height: 45px; border-radius: 50%; border: 1.8px solid black"
         >
@@ -120,35 +133,59 @@
     </div>
     <div>
       <div class="d-flex align-items-center">
-        <!-- <div style="height: 4px;width: 40px;background-color: #6D9886;"></div> -->
-        <div
-          class="card-info mb-3 p-4"
-          style="background-color: #f7f7f7; border-radius: 8px"
-        >
-          <ul>
-            <li>
-              <div class="fw-bold" style="text-transform: uppercase">
-                Tahaluf Elamarat Company
+        <carousel v-model="currentSlide">
+          <slide
+            style="text-align: start"
+            v-for="(Company, index) in companies[currentSlide]?.languages"
+            :key="index"
+          >
+            <div class="card-info mb-3 p-5" style="background-color: #f7f7f7">
+              <div class="fw-bold mb-4" style="text-transform: uppercase">
+                {{ Company.name }}
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
-                voluptatem, sit dolore magnam dolores aperiam vero eaque. Veniam
-                laboriosam minus quas, dolorum, fugit soluta, officia iste dolorem
-                cupiditate perferendis voluptas.
+                {{ Company.desrciption }}
               </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
-                voluptatem, sit dolore magnam dolores aperiam vero eaque. Veniam
-                laboriosam minus quas, dolorum, fugit soluta, officia iste dolorem
-                cupiditate perferendis voluptas.
-              </p>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </slide>
+          <template #addons> </template>
+        </carousel>
       </div>
     </div>
   </div>
 </template>
+<script setup>
+import "vue3-carousel/dist/carousel.css";
+import DataEn from "../content/en.json";
+import DataAr from "../content/ar.json";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { useI18n } from "vue-i18n";
+
+const { locale } = useI18n();
+const route = useRoute();
+
+const companies = ref([]);
+const fetchData = async () => {
+  try {
+    const response = locale.value === "en" ? DataEn : DataAr;
+    companies.value = response.companies;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+onMounted(() => {
+  fetchData();
+});
+
+watch(
+  () => locale.value,
+  (value) => {
+    fetchData();
+  }
+);
+const currentSlide = ref(0);
+</script>
 <style lang="css">
 .bg-circle {
   background-color: #6d9886 !important;

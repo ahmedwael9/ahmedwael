@@ -1,14 +1,10 @@
 <template>
-  <div >
+  <div>
     <div class="py-5 service-section">
       <div class="py-5 container">
         <div>
           <div class="text-center">
-            <h4
-              style="color: #393e46; text-transform: uppercase"
-              class="fw-bold m-0"
-              @click="changeLanguage"
-            >
+            <h4 style="color: #393e46; text-transform: uppercase" class="fw-bold m-0">
               {{ $t("service") }}
             </h4>
             <div class="fs-6 text-muted">
@@ -116,8 +112,8 @@ const { locale } = useI18n();
 
 onMounted(() => {
   AOS.init({
-    offset: 200, // Offset (in pixels) from the top of the page to trigger animations
-    duration: 800, // Duration (in milliseconds) of the animation
+    offset: 250, // Offset (in pixels) from the top of the page to trigger animations
+    duration: 1000, // Duration (in milliseconds) of the animation
   });
 });
 
@@ -149,25 +145,7 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
-body {
-  overflow-x: hidden;
-  cursor: auto;
-}
-.shadow {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  z-index: 1;
-  opacity: 0.4;
-  mix-blend-mode: darken;
-  transition: 0.07s ease;
-  background-color: #333333;
-  border-radius: 50%;
-  pointer-events: none;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px,
-    rgba(17, 17, 26, 0.1) 0px 16px 48px;
-  transform: translate(-50%, -50%);
-}
+
 // .container-projects {
 //   height: 100vh; /* Make it full-screen height */
 //   overflow-y: scroll; /* Enable vertical scrolling */
