@@ -4,5 +4,10 @@
     "contact": "Contact Us",
     "lorem":"Lorem ipsum dolor sit amet consectetur adipisicing",
     "service":"services",
+    "resume":"Resume",
+    "home":"Home",
+    "projects":"Projects",
+    "aboutMe":"About Me",
+    "iam":"I'M",
     "introDiscrition":"Productive Front End Developer for Web and Mobile Apps,builds exceptional UI designs with awesome animations,focusing on the quality in the first place"
   }

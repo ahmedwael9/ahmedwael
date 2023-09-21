@@ -23,6 +23,7 @@
     "bootstrap": "^5.3.1",
     "chart.js": "^4.4.0",
     "d3": "^7.8.5",
+    "vue-fullscreen": "^2.6.1",
     "vue3-carousel": "^0.3.1"
   }
 }

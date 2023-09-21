@@ -1,5 +1,57 @@
 <template>
-  <div class="container py-5" style="min-height: 100vh">
+  <div class="container">
+    <div class="single-box">
+      <div class="custom"></div>
+      <div class="date-area">
+        <span>2012</span>
+      </div>
+      <div class="content">
+        <h2>WEBTANK COMPANY</h2>
+        <h3>Oct 2020 / Feb 2012</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, iusto?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad delectus ullam
+          nostrum fuga sequi. Possimus ipsum magni facilis minus, beatae itaque
+          perspiciatis et delectus sit, ullam illo. Tenetur, atque eaque.
+        </p>
+      </div>
+    </div>
+    <div class="single-box box-right">
+      <div class="custom"></div>
+      <div class="date-area">
+        <span>2008</span>
+      </div>
+      <div class="content">
+        <h2>Yahoo Inc</h2>
+        <h3>Senior Marketer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, iusto?</p>
+      </div>
+    </div>
+    <div class="single-box">
+      <div class="custom"></div>
+      <div class="date-area">
+        <span>2006</span>
+      </div>
+      <div class="content">
+        <h2>Bing</h2>
+        <h3>Junior Marketing officer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, iusto?</p>
+      </div>
+    </div>
+    <div class="single-box box-right">
+      <div class="custom"></div>
+      <div class="date-area">
+        <span>2000</span>
+      </div>
+      <div class="content">
+        <h2>Youtube</h2>
+        <h3>Search Engine Optimizer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, iusto?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container py-5" style="min-height: 100vh">
     <div class="d-flex align-items-center">
       <div class="">
         <div
@@ -7,65 +59,15 @@
         ></div>
       </div>
       <div style="height: 4px; width: 100%; background-color: #6d9886"></div>
-      <div>
-        <div
-          class="p-1 bg-circle"
-          style="width: 70px; height: 70px; background-color: #bfbfbf; border-radius: 50%"
-        >
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              background-color: #ffffff;
-              border-radius: 50%;
-            "
-            class="d-flex justify-content-center align-items-center"
-          >
-            <div class="fw-bold fs-7">Feb</div>
+      <div v-for="(item, index) in companies" style="width: 100%">
+        <div class="d-flex align-items-center">
+          <div class="fw-bold p-1 fs-7 text-center" style="min-width: 120px">
+            {{ item.name }}
           </div>
+          <div class="" style="height: 4px; width: 100%; background-color: #bfbfbf"></div>
         </div>
       </div>
-      <div class="" style="height: 4px; width: 100%; background-color: #bfbfbf"></div>
-      <div class="">
-        <div
-          class="p-1"
-          style="width: 70px; height: 70px; background-color: #bfbfbf; border-radius: 50%"
-        >
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              background-color: #ffffff;
-              border-radius: 50%;
-            "
-            class="d-flex justify-content-center align-items-center"
-          >
-            <div class="fw-bold fs-7">Oct</div>
-          </div>
-        </div>
-      </div>
-      <div class="" style="height: 4px; width: 100%; background-color: #bfbfbf"></div>
-      <div class="">
-        <div
-          class="p-1"
-          style="width: 70px; height: 70px; background-color: #bfbfbf; border-radius: 50%"
-        >
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              background-color: #ffffff;
-              border-radius: 50%;
-            "
-            class="d-flex justify-content-center align-items-center"
-          >
-            <div class="fw-bold fs-7">Jun</div>
-          </div>
-        </div>
-      </div>
-      <div class="" style="height: 4px; width: 100%; background-color: #bfbfbf"></div>
     </div>
-    <!-- ------------------------------------------------------------------------------------------------- -->
     <div class="d-flex align-items-center mb-4 mt-5">
       <div class="w-100">
         <div class="fw-bold" style="text-transform: uppercase; color: #6d9886">
@@ -106,7 +108,7 @@
         <div
           @click="
             () => {
-              currentSlide < companies.length - 1 ? currentSlide++ : null;
+              currentSlide < companies.length - 1 ? currentSlide++ : (currentSlide = 0);
             }
           "
           class="p-1 mx-2 d-flex justify-content-center align-items-center"
@@ -152,7 +154,7 @@
         </carousel>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 <script setup>
 import "vue3-carousel/dist/carousel.css";
@@ -174,8 +176,30 @@ const fetchData = async () => {
     console.error("Error fetching data:", error);
   }
 };
+
+const scrollToBottom = () => {
+  const startY = window.pageYOffset;
+  const targetY = document.documentElement.scrollHeight - window.innerHeight;
+  const distance = targetY - startY;
+  const duration = 1000; // Adjust the duration as needed (in milliseconds)
+  let startTimestamp = null;
+
+  function step(timestamp) {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = (timestamp - startTimestamp) / duration;
+
+    window.scrollTo(0, startY + distance * progress);
+
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+
+  requestAnimationFrame(step);
+};
 onMounted(() => {
   fetchData();
+  scrollToBottom();
 });
 
 watch(
@@ -187,21 +211,76 @@ watch(
 const currentSlide = ref(0);
 </script>
 <style lang="css">
-.bg-circle {
-  background-color: #6d9886 !important;
-  animation: movimiento 1s infinite;
-}
-
 .card-info {
   transition: 0.3s;
 }
 
-@keyframes movimiento {
-  0% {
-    background-color: antiquewhite !important;
+.single-box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: auto;
+}
+.date-area {
+  display: flex;
+  background: linear-gradient(
+    to right,
+    #ffffff 45%,
+    #6d9886 45%,
+    #6d9886 45%,
+    #ffffff 50%
+  );
+  order: 2;
+  text-align: center;
+  color: #fff;
+  font-size: 38px;
+}
+.date-area > span {
+  font-size: 20px;
+  line-height: 70px;
+  margin: auto;
+  background: #6d9886;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.content {
+  padding: 30px;
+  border-radius: 5px;
+  order: 3;
+  width: 100%;
+  background: #f2e7d5;
+}
+.content {
+  margin-block: 3%;
+}
+.content h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content h3 {
+  font-size: 14px;
+  color: #000;
+}
+.content p {
+  font-size: 14px;
+  text-align: justify;
+  color: #393e46;
+}
+@media (min-width: 640px) {
+  .content,
+  .custom {
+    width: 40%;
   }
-  100% {
-    background-color: rgb(251, 144, 3) !important;
+  .box-right .content {
+    order: 1;
+    padding-right: 10px;
+    border-radius: 5px;
+  }
+  .box-right .custom {
+    order: 3;
   }
 }
 </style>

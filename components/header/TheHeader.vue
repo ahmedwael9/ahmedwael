@@ -24,15 +24,17 @@
                   @click="$router.push('/')"
                   aria-current="page"
                   href="#"
-                  >Home</a
+                  >{{ $t("home") }}</a
                 >
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push('/aboutMe')" href="#">About Me</a>
+              <a class="nav-link" @click="$router.push('/aboutMe')" href="#">{{
+                $t("aboutMe")
+              }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#">{{ $t("projects") }}</a>
             </li>
           </ul>
         </div>
@@ -167,11 +169,11 @@
       </div>
     </nav>
     <div v-if="['index'].includes($route.name)" class="container">
-      <div class="row py-5 justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-6">
+      <div class="row py-5 justify-content-between align-items-center h-100">
+        <div class="col-12 col-md-7">
           <div class="">
             <span :style="darkmode ? 'color: #393e46' : ''" class="fs-1 fw-bold d-flex"
-              >I'M
+              >{{ $t("iam") }}
               <span style="color: #6d9886" class="mx-3 fs-1 intro fw-bold d-flex">
                 <span class="">{{ textShow }}</span>
               </span>
@@ -180,19 +182,24 @@
               {{ $t("introDiscrition") }}
             </p>
             <div
+              @click="pdfUrl()"
               style="background-color: #393e46"
               class="btn px-5 text-light"
               :class="{ 'btn-light': darkMode }"
               type="button"
             >
-              RESUME
+              {{ $t("resume") }}
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="w-100 text-center">
-            <img v-if="!darkMode" src="../../assets/images/introImage.svg" />
-            <img v-else src="../../assets/images/introImageDarkMode.svg" />
+        <div class="col-12 col-md-5">
+          <div class="w-100 my-3 text-center">
+            <img
+              class="w-100"
+              v-if="!darkMode"
+              src="../../assets/images/introImage.svg"
+            />
+            <img class="w-100" v-else src="../../assets/images/introImageDarkMode.svg" />
           </div>
         </div>
       </div>
@@ -211,6 +218,11 @@ const changeLanguage = () => {
 const textIntro = ["AHMED WAEL", "FRONTEND DEVELOPER"];
 const textShow = ref("");
 const darkMode = ref(false);
+
+const pdfUrl = () => {
+  const pdfUrl = "/AhmedDaqqa.pdf"; // Replace with the actual PDF file path
+  window.open(pdfUrl, "_blank");
+};
 
 onMounted(() => {
   let currentIndex = 0;

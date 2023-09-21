@@ -3,16 +3,16 @@
         [
             {
                 "id":1,
-                "name":"UOP CENTER",
-                "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?",
+                "name":"UOP CENTER APP",
+                "desrciption":"Graduation project, providing student services Graduation project, providing student servicesGraduation project, providing student servicesGraduation project, providing student services",
                 "bgColor":"#252525",
                 "textLight":true,
                 "images":[
-                    "https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
-                    "https://img.freepik.com/premium-psd/digital-devices-screen-editable_24972-2051.jpg",
-                    "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/80a2bb126031567.612542339630e.png"
+                    "/images/index/9.png",
+                    "/images/index/logoUop.png",
+                    "/images/index/2385.png"
                 ],
-                "mainImage":"https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                "mainImage":"/images/index/2385.png",
                 "languages":[
                     {
                         "name":"Html",
@@ -37,17 +37,17 @@
                 ],
                 "slider":[
                     {
-                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "url":"/images/index/9.png",
                         "title":"Website display consistency across different devices",
                         "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
                     },
                     {
-                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "url":"/images/index/2385.png",
                         "title":"Safe for visitors and well protected against hacking",
                         "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
                     },
                     {
-                        "url":"https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1",
+                        "url":"/images/index/9.png",
                         "title":"Safe for visitors and well protected against hacking",
                         "desrciption":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque vel voluptas. Iusto quia quas consequatur, expedita veritatis eum ipsam at earum quae perspiciatis debitis voluptas voluptates modi alias similique?"
                     }
@@ -64,7 +64,7 @@
                     "https://img.freepik.com/premium-psd/digital-devices-screen-editable_24972-2051.jpg",
                     "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/80a2bb126031567.612542339630e.png"
                 ],
-                "mainImage":"https://img.freepik.com/free-psd/template-with-yoga-concept_23-2148518777.jpg?w=2000",
+                "mainImage":"/images/index/9.png",
                 "languages":[
                     {
                         "name":"JavaScript",

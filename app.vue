@@ -22,6 +22,11 @@ onMounted(() => {
 });
 </script>
 <style>
+body {
+  height: 100vh; /* Make it full-screen height */
+  overflow-x: hidden; /* Enable vertical scrolling */
+}
+
 .shadow {
   position: absolute;
   width: 50px;

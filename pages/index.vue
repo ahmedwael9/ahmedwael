@@ -86,8 +86,10 @@
                     background-position: center;
                     background-size: cover;
                     width: 100%;
-                    background-image: url('https://i0.wp.com/mockupline.com/wp-content/uploads/2022/10/multi-device-mockup.jpg?fit=2500%2C1667&ssl=1');
                   "
+                  :style="{
+                    backgroundImage: 'url(' + project?.mainImage + ')',
+                  }"
                 ></div>
               </div>
             </div>
@@ -145,7 +147,6 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
-
 // .container-projects {
 //   height: 100vh; /* Make it full-screen height */
 //   overflow-y: scroll; /* Enable vertical scrolling */
