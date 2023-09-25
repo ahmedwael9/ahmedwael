@@ -4,21 +4,18 @@
       <div class="py-5 container">
         <div>
           <div class="text-center">
-            <h4 style="color: #393e46; text-transform: uppercase" class="fw-bold m-0">
+            <h4 style="text-transform: uppercase" class="fw-bold m-0">
               {{ $t("service") }}
             </h4>
-            <div class="fs-6 text-muted">
+            <p class="fs-6">
               {{ $t("lorem") }}
-            </div>
+            </p>
           </div>
           <div class="row justify-content-center">
             <div class="col-10">
               <div class="row mt-5">
                 <section v-for="service in services" class="col-12 col-md-4">
-                  <div
-                    style="background-color: #f2e7d5"
-                    class="w-100 p-4 mb-2 card-service my-auto"
-                  >
+                  <div class="w-100 p-4 mb-2 card-service my-auto">
                     <div class="mb-3" style="display: inline-block">
                       <div
                         class="bg-white circle p-3"
@@ -41,6 +38,11 @@
         </div>
       </div>
     </div>
+    <!-- <div>
+      <p>Count: {{ count }}</p>
+      <p>Double Count: {{ doubleCount }}</p>
+      <button @click="increment">Increment</button>
+    </div> -->
     <div class="pb-5">
       <div class="container">
         <div
@@ -52,13 +54,9 @@
           <div class="row m-0 align-items-center">
             <div
               :class="{ 'order-1 ': index % 2 != 0, 'text-light': project.textLight }"
-              style="
-                background-size: cover;
-                background-image: url('/assets/images/bgCorner.svg');
-              "
               class="col-12 col-md-6 p-0 p-5"
             >
-              <div class="fs-1 fw-bold">
+              <div class="fs-1 fw-bold" :class="{}">
                 {{ project.name }}
               </div>
               <p>
@@ -119,10 +117,10 @@ onMounted(() => {
   });
 });
 
-const changeLanguage = () => {
-  const newLocale = locale.value === "en" ? "ar" : "en";
-  locale.value = newLocale;
-};
+// const counter = computed(() => {
+//   return store.state.index.counter;
+// });
+
 const projects = ref([]);
 const services = ref([]);
 const fetchData = async () => {
@@ -194,10 +192,7 @@ onMounted(() => {
   transition: 0.3s;
 }
 
-.circle {
-  outline: 2.5px dashed#F2E7D5;
-  outline-offset: -7px;
-}
+
 .circle-project {
   outline: 2.5px dashed rgb(255, 255, 255);
   outline-offset: 7px;
@@ -214,23 +209,7 @@ onMounted(() => {
   animation: 8s linear 0s infinite alternate mymove;
 }
 
-.card-service:hover {
-  background-color: #6d9886 !important;
-  outline: 2.5px solid rgb(255, 255, 255);
-  outline-offset: -7px;
-  transform: translateY(-18px);
-  .title {
-    color: #ffffff;
-  }
-  p {
-    color: #ffffff;
-  }
-  .circle {
-    outline: 2.5px dashed rgb(255, 255, 255);
-    outline-offset: 5px !important;
-    animation: 8s linear 0.4s infinite alternate mymove;
-  }
-}
+
 
 .service-section {
   background-image: url("/assets/images/bg.svg"), url("/assets/images/bg.svg"),

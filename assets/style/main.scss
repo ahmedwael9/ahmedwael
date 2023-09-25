@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;800&family=Tajawal:wght@400;500&display=swap');
-
-
-// Light Mode Colors
-$primary-color: #393e46;
-$background-color: #ffffff;
-
-// Dark Mode Colors
-$dark-primary-color: #ffffff;
-$dark-background-color: #252525;
-
-.app {
-  background-color: $background-color; // Light mode background color
-  color: $primary-color; // Light mode text color
-  &.dark-mode {
-    background-color: $dark-background-color; // Dark mode background color
-    color: $dark-primary-color; // Dark mode text color
-  }
-}
+@import './variables.scss';
 
 
 body {

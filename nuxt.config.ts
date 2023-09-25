@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     "@/assets/style/main.scss",
     '@/assets/style/custom-bootstrap.scss'
   ],
+  // modules: [
+  //   '@pinia/nuxt',
+  // ],
   app: {
     head: {
       link: [

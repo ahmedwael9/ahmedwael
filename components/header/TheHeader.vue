@@ -1,17 +1,10 @@
 <template>
-  <div
-    :class="{ 'dark-mode': darkMode }"
-    :style="!darkMode ? 'background-color: #f7f7f7' : ''"
-    class="pb-2 header-section app"
-  >
-    <nav
-      class="navbar navbar-expand-lg"
-      :class="darkMode ? 'navbar-dark' : 'navbar-light'"
-    >
+  <div class="pb-2 header-section app">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand m-0" href="#">
-          <div dir="ltr" style="color: #6d9886" class="fw-bold logo">
-            AHMED<span :class="darkMode ? 'text-light' : 'text-dark'">WAEL</span>
+          <div dir="ltr" class="fw-bold logo">
+            AHMED<span>WAEL</span>
             <span class="material-icons icon">code</span>
           </div>
         </a>
@@ -42,7 +35,7 @@
           <li class="row align-items-center">
             <div class="nav-link text-dark p-0 px-4" href="#">
               <div
-                class="p-1"
+                class="p-1 d-none d-lg-block"
                 style="
                   width: 60px;
                   height: 30px;
@@ -172,7 +165,7 @@
       <div class="row py-5 justify-content-between align-items-center h-100">
         <div class="col-12 col-md-7">
           <div class="">
-            <span :style="darkmode ? 'color: #393e46' : ''" class="fs-1 fw-bold d-flex"
+            <span class="fs-1 fw-bold d-flex"
               >{{ $t("iam") }}
               <span style="color: #6d9886" class="mx-3 fs-1 intro fw-bold d-flex">
                 <span class="">{{ textShow }}</span>
@@ -208,6 +201,9 @@
 </template>
 <script setup>
 import { useI18n } from "vue-i18n";
+// import { useCounterStore } from "@/stores/index";
+
+// const store = useCounterStore();
 
 const { locale } = useI18n();
 const changeLanguage = () => {
@@ -245,15 +241,6 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
-@keyframes movimiento {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 355px 0;
-  }
-}
-
 .header-section {
   background-image: url("/assets/images/bgCorner.svg");
   background-repeat: no-repeat;

@@ -2,9 +2,7 @@
   <div class="py-5">
     <div class="text-center mx-2">
       <h4 class="fw-bold m-0">CONTACT ME</h4>
-      <div class="fs-6 text-muted">
-        Lorem ipsum dolor sit amet consectetur adipisicing
-      </div>
+      <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing</p>
     </div>
     <div class="row justify-content-center mt-3 mx-0">
       <div class="col-11 col-sm-8">

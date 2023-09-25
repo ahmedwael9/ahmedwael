@@ -6,10 +6,7 @@
           class="position-absolute"
           style="top: 50%; right: 10%; transform: translateY(-50%)"
         >
-          <div
-            class="p-3 bg-dark"
-            style="border-radius: 50%; border: 1.5px solid #ffffff"
-          >
+          <div class="p-3 bg-dark" style="border-radius: 50%; border: 2px solid #ffffff">
             <img
               @click="downloadImage(imageUrl)"
               src="../../assets/images/download.svg"
@@ -96,18 +93,15 @@
           <h1 class="fw-bold half-a-border-on-bottom" style="color: #6d9886">
             {{ project?.name }}
           </h1>
-          <div class="">
+          <p class="">
             {{ project?.desrciption }}
-          </div>
+          </p>
         </div>
         <div class="col-12 col-md-5 py-2">
           <img style="width: 100%; background-size: contain" :src="project?.mainImage" />
         </div>
       </div>
-      <div
-        class="py-5 proparity-section"
-        style="background-color: #f7f7f7; border-radius: 6px"
-      >
+      <div class="py-5 proparity-section" style="border-radius: 6px">
         <div class="row align-items-center justify-content-center">
           <div class="col-12 col-md-5">
             <div class="text-center" style="width: 100%; height: 400px">
@@ -117,13 +111,12 @@
           <div class="col-12 col-md-5">
             <ul>
               <li v-for="language in project?.languages" class="mb-3">
-                <div
-                  class="fw-bold fs-5"
-                  style="text-transform: uppercase; color: #393e46"
-                >
+                <div class="fw-bold fs-5" style="text-transform: uppercase">
                   {{ language.name }}
                 </div>
-                {{ language.desrciption }}
+                <p>
+                  {{ language.desrciption }}
+                </p>
               </li>
             </ul>
           </div>
@@ -279,7 +272,7 @@ watch(
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #6d9886;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 10px;
   transform: translate(40px, 0px);
 }
 

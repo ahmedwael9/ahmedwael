@@ -1,0 +1,132 @@
+
+[theme="dark"] {
+    --text-primary: rgb(255, 255, 255);
+    --text-website: #6d9886;
+    --text-muted:rgb(186, 186, 186);
+    --bg-muted:#2b2b2b;
+    --bg-secound:#252525;
+    --bg-section:#24242447;
+    --bg-warning:#252525;
+    --bg-bage:#2b2b2b;
+    --bg-shadow:#ffffff;
+}
+[theme="light"] {
+    --text-primary: #393e46;
+    --text-website: #6d9886;
+    --text-muted:#a0a0a0;
+    --bg-muted:#f7f7f7;
+    --bg-secound:#f7f7f7;
+    --bg-section:#24242447;
+    --bg-warning:#f2e7d5;
+    --bg-bage:#ffffff;
+    --bg-shadow:#2a2a2a;
+}
+
+.circle {
+  outline: 2.5px dashed var(--bg-secound);
+  outline-offset: -7px;
+}
+
+.card-service:hover {
+    background-color: #6d9886 !important;
+    outline: 2.5px solid rgb(255, 255, 255);
+    outline-offset: -7px;
+    transform: translateY(-18px);
+  
+    p {
+      color: #ffffff;
+    }
+    .circle {
+      outline: 2.5px dashed rgb(255, 255, 255);
+      outline-offset: 5px !important;
+      animation: 8s linear 0.4s infinite alternate mymove;
+    }
+  }
+
+
+.shadow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    /* opacity: 0.4; */
+    transition: 0.085s ease;
+    border-radius: 50%;
+    border: 2px solid white !important;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+.proparity-section{
+    background-color:var(--bg-secound) ;
+}
+
+footer{
+    background-color:var(--bg-secound);
+    .logo-footer{
+        span{
+            color:var(--text-primary);
+        }
+    }
+}
+
+.logo{
+    color:var(--text-website);
+    .icon{
+    color:var(--text-website) !important;
+    }
+}
+
+
+.header-section{
+    background-color:var(--bg-secound);
+
+    
+}
+// footer{
+//     .logo-footer{
+//         span{
+//             color:var(--text-primary);
+//         }
+//     }
+// }
+.app {
+    background-color: var(--bg-secound); 
+    color: var(--text-primary);
+  }
+.navbar{
+    .navbar-brand{
+        color:var(--text-website);
+        span{
+            color:var(--text-primary);
+        }
+    }
+    .collapse{
+        .navbar-nav{
+            .nav-link{
+                color:var(--text-primary);
+            }
+        }
+    }
+}
+.form-control{
+    background-color:var(--bg-muted);
+}
+.card-service{
+    background-color: var(--bg-warning)
+}
+
+.title{
+    color:  var(--text-primary) ;
+}
+
+.aa {
+    color: var(--text-primary); 
+    background-color: var(--bg-bage); 
+}
+
+
+p{
+    color: var(--text-muted); 
+
+}
