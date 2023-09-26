@@ -265,24 +265,6 @@ watch(
 }
 
 /* Styles for the button (you can customize it) */
-.label {
-  transition: 0.5s ease-in-out;
-  height: 100px;
-  width: 40px;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #6d9886;
-  border-bottom-left-radius: 10px;
-  transform: translate(40px, 0px);
-}
-
-.shadow {
-}
-
-/* Use + instead of ~ to select the direct sibling */
-.sub-image:hover .label {
-  transform: translate(0px, 0px) !important;
-}
 
 .half-a-border-on-bottom {
   border-bottom: 5px solid;
