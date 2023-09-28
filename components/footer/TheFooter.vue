@@ -27,7 +27,7 @@
                   <div
                     v-for="n in social"
                     style="cursor: pointer"
-                    class="px-3 d-flex align-items-center justify-content-center mb-3"
+                    class="px-3 d-flex align-items-center justify-content-center mb-3 icon-footer"
                   >
                     <div v-if="n.type == 'face'" class="">
                       <img src="../../assets/images/face.svg" />
@@ -56,7 +56,7 @@
                         : 'phone-label'
                     "
                   >
-                    <div v-if="item.icon == 'map'" class="">
+                    <div v-if="item.icon == 'map'" class="icon-footer">
                       <svg
                         class="map"
                         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@
                         />
                       </svg>
                     </div>
-                    <div v-else-if="item.icon == 'email'">
+                    <div class="icon-footer" v-else-if="item.icon == 'email'">
                       <svg
                         class="email"
                         xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@
                         />
                       </svg>
                     </div>
-                    <div class="phone-icon" v-else>
+                    <div class="phone-icon icon-footer" v-else>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="30px"
@@ -127,8 +127,14 @@
           </div>
         </div>
       </div>
-      <div class="mt-4 fw-bold text-center py-5">
-        <div style="font-size: 12px">&copy; Copyright {{ new Date().getFullYear() }}</div>
+      <div class="mt-4 text-center py-5">
+        <div class="fw-bold" style="font-size: 12px">
+          &copy; Copyright {{ new Date().getFullYear() }}
+        </div>
+        <p style="font-size: 9px">
+          all rights are save. Use or copying of the materials without prior permission is
+          strictly prohibited, and infringers may be subject to legal action.
+        </p>
       </div>
     </div>
     <div
@@ -174,12 +180,12 @@ const info = [
   {
     icon: "email",
     label: "Awamfd99@gmail.com",
-    link: "Amman / Musaab Ben Omeir Street",
+    link: "mailto:awamfd99@gmail.com",
   },
   {
     icon: "phone",
     label: "079 - 579 - 93 - 74",
-    link: "Amman / Musaab Ben Omeir Street",
+    link: "https://wa.me/00962795799374",
   },
 ];
 const social = ref([
@@ -189,7 +195,7 @@ const social = ref([
   },
   {
     type: "face",
-    link: "",
+    link: "https://www.facebook.com/profile.php?id=100044875756362",
   },
   {
     type: "twiter",
@@ -209,6 +215,10 @@ const social = ref([
 a {
   text-decoration: none;
   color: unset !important;
+}
+
+.icon-footer {
+  mix-blend-mode: difference;
 }
 
 .phone-icon {

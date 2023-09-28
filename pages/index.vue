@@ -72,7 +72,7 @@
                 "
                 type="button"
               >
-                View Details
+                {{ $t("viewDetails") }}
               </div>
             </div>
             <div class="col-12 col-md-6 p-0">
@@ -95,7 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="py-5">
+    <div class="pb-5">
       <GeneralContactMe />
     </div>
   </div>
@@ -116,10 +116,6 @@ onMounted(() => {
     duration: 1000, // Duration (in milliseconds) of the animation
   });
 });
-
-// const counter = computed(() => {
-//   return store.state.index.counter;
-// });
 
 const projects = ref([]);
 const services = ref([]);
@@ -145,20 +141,6 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
-// .container-projects {
-//   height: 100vh; /* Make it full-screen height */
-//   overflow-y: scroll; /* Enable vertical scrolling */
-//   scroll-snap-type: y mandatory; /* Mandatory scroll snap behavior */
-//   position: relative; /* Ensure proper positioning */
-// }
-// .slides {
-//   height: 100vh;
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   scroll-snap-align: start;
-// }
-
 .img-product {
   transition: 0.3s;
 }
@@ -192,7 +174,6 @@ onMounted(() => {
   transition: 0.3s;
 }
 
-
 .circle-project {
   outline: 2.5px dashed rgb(255, 255, 255);
   outline-offset: 7px;
@@ -208,8 +189,6 @@ onMounted(() => {
 .circle-project {
   animation: 8s linear 0s infinite alternate mymove;
 }
-
-
 
 .service-section {
   background-image: url("/assets/images/bg.svg"), url("/assets/images/bg.svg"),

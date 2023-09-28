@@ -1,8 +1,8 @@
 <template>
-  <div class="py-5">
-    <div class="text-center mx-2">
-      <h4 class="fw-bold m-0">CONTACT ME</h4>
-      <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+  <div class="py-5 container">
+    <div class="text-center pb-3">
+      <h4 class="fw-bold m-0" style="text-transform: uppercase">{{ $t("contactMe") }}</h4>
+      <p class="fs-6">{{ $t("lorem") }}</p>
     </div>
     <div class="row justify-content-center mt-3 mx-0">
       <div class="col-11 col-sm-8">
@@ -31,12 +31,8 @@
             <div class="invalid-feedback">Please provide a description.</div>
           </div>
           <div class="text-center mt-3">
-            <button
-              style="background-color: #393e46; border-radius: 18px"
-              class="btn text-light px-5"
-              type="submit"
-            >
-              Submit form
+            <button class="btn btn-light px-5" type="submit">
+              {{ $t("sendTheMessage") }}
             </button>
           </div>
         </form>
@@ -66,16 +62,13 @@ const submitForm = async () => {
     });
 
     if (response.ok) {
-      // Handle successful form submission (e.g., show a success message)
       console.log("Form submitted successfully");
       formData.value.description = "";
       formData.value.email = "";
     } else {
-      // Handle form submission error (e.g., show an error message)
       console.error("Form submission failed");
     }
   } else {
-    // Form is not valid, you can handle this case as needed
     console.error("Form is not valid");
   }
 };

@@ -152,8 +152,8 @@
             <button
               @click="changeLanguage"
               type="button"
-              style="background-color: #393e46; border-radius: 18px"
-              class="btn text-light"
+              style="border-radius: 18px"
+              class="btn btn-light"
             >
               {{ locale == "en" ? "AR" : "EN" }}
             </button>
@@ -176,9 +176,8 @@
             </p>
             <div
               @click="pdfUrl()"
-              style="background-color: #393e46"
-              class="btn px-5 text-light"
-              :class="{ 'btn-light': darkMode }"
+              class="btn btn-light px-5"
+              style="text-transform: uppercase"
               type="button"
             >
               {{ $t("resume") }}

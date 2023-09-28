@@ -9,6 +9,7 @@
     --bg-warning:#252525;
     --bg-bage:#2b2b2b;
     --bg-shadow:#ffffff;
+    --bg-btn:#2a2a2a;
 }
 [theme="light"] {
     --text-primary: #393e46;
@@ -20,10 +21,11 @@
     --bg-warning:#f2e7d5;
     --bg-bage:#ffffff;
     --bg-shadow:#2a2a2a;
+    --bg-btn:#2a2a2a;
 }
 
 .circle {
-  outline: 2.5px dashed var(--bg-secound);
+  outline: 2.5px dashed var(--bg-muted);
   outline-offset: -7px;
 }
 
