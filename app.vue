@@ -1,5 +1,5 @@
 <template>
-  <div class="aa" theme="dark" :dir="$i18n.locale == 'ar' ? 'rtl' : 'en'">
+  <div class="aa" theme="light" :dir="$i18n.locale == 'ar' ? 'rtl' : 'en'">
     <NuxtLayout>
       <div class="shadow" :style="shadowStyle"></div>
       <NuxtPage />
