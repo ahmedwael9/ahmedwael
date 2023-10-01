@@ -4,7 +4,7 @@
       <h4 class="fw-bold" style="text-transform: uppercase">{{ $t("aboutMe") }}</h4>
       <div>{{ $t("lorem") }}</div>
     </div>
-    <div class="py-4 box-container" style="overflow: hidden">
+    <div class="my-4 box-container position-relative" style="overflow: hidden">
       <div class="d-flex">
         <div
           v-for="n in 10"
@@ -33,7 +33,24 @@
           java script
         </div>
       </div>
+      <div
+        class=""
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: rgb(0, 238, 111);
+          background: radial-gradient(
+            circle,
+            rgba(0, 255, 119, 0) 82%,
+            rgb(255, 255, 255) 100%
+          );
+        "
+      ></div>
     </div>
+    <div style="background-color: aqua; height: 100vh">ddd</div>
   </div>
 </template>
 <script setup>

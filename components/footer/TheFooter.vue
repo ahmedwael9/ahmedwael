@@ -221,17 +221,23 @@ a {
   mix-blend-mode: difference;
 }
 
-.phone-icon {
+.phone-icon,
+.speakre {
   transition: 0.2s;
+}
+.wave-phone,
+.wave-phone-large {
+  opacity: 0;
 }
 
 .phone-label:hover .wave-phone {
-  animation: typing 1s linear 0.4s infinite alternate;
+  animation: call 1s linear 0.2s infinite alternate;
 }
 .phone-label:hover .wave-phone-large {
-  animation: typing 1s linear 0.2s infinite alternate;
+  animation: call 1s linear 0.65s infinite alternate;
 }
 .phone-label:hover .speakre {
+  transform: rotate(10deg);
   animation: rotate-speakers 1s linear 0s infinite alternate;
 }
 .email-label:hover .email {
@@ -243,10 +249,21 @@ a {
 
 @keyframes rotate-speakers {
   from {
-    transform: rotate(2deg);
+    transform-origin: center;
+    transform: rotate(-10deg);
   }
   to {
+    transform-origin: center;
     transform: rotate(10deg);
+  }
+}
+
+@keyframes call {
+  from {
+    opacity: 0.05;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>

@@ -16,7 +16,7 @@
               style="border-radius: 20px 20px 0px 0px"
               required
             />
-            <div class="invalid-feedback">Please provide a valid email.</div>
+            <div class="invalid-feedback text-center">Please provide a valid email.</div>
           </div>
           <div class="mt-2">
             <textarea
@@ -28,17 +28,19 @@
               style="border-radius: 0px 0px 20px 20px"
               required
             ></textarea>
-            <div class="invalid-feedback">Please provide a description.</div>
+            <div class="invalid-feedback text-center">Please provide a description.</div>
           </div>
-          <div class="text-center d-flex justify-content-center align-items-center mt-3">
-            <!-- <button class="btn btn-light px-5" type="submit">
-              {{ $t("sendTheMessage") }}
-            </button> -->
+          <div
+            @click="submitForm()"
+            style="cursor: pointer"
+            class="text-center d-flex justify-content-center align-items-center mt-3"
+          >
             <div
               class="p-2"
               style="border: 3px solid #393e46; border-radius: 50%; display: inline-block"
             >
               <svg
+                :class="{ fly: sendMessage }"
                 xmlns="http://www.w3.org/2000/svg"
                 width="30px"
                 height="30px"
@@ -53,7 +55,9 @@
                 />
               </svg>
             </div>
-            <div class="px-2">{{ $t("sendTheMessage") }}</div>
+            <div class="px-2" style="text-transform: uppercase">
+              {{ $t("sendTheMessage") }}
+            </div>
           </div>
         </form>
       </div>
@@ -63,11 +67,13 @@
 
 <script setup>
 import { ref } from "vue";
+import("@/assets/bootstrap-validation.js");
 
 const formData = ref({
   email: "",
   description: "",
 });
+const sendMessage = ref(false);
 
 const submitForm = async () => {
   const form = document.querySelector(".needs-validation");
@@ -82,6 +88,7 @@ const submitForm = async () => {
     });
 
     if (response.ok) {
+      sendMessage.value = true;
       console.log("Form submitted successfully");
       formData.value.description = "";
       formData.value.email = "";
@@ -90,6 +97,32 @@ const submitForm = async () => {
     }
   } else {
     console.error("Form is not valid");
+    form.classList.add("was-validated");
   }
 };
 </script>
+<style>
+.fly {
+  transition: 0.6s;
+  animation: 8s linear 0s infinite backwards flyplane;
+}
+
+@keyframes flyplane {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(39px, -20px) rotate(10deg);
+  }
+  50% {
+    transform: translate(89px, -30px) rotate(20deg);
+  }
+  75% {
+    transform: translate(139px, -40px) rotate(40deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(179px, -50px) rotate(60deg);
+  }
+}
+</style>
