@@ -119,7 +119,14 @@
                         />
                       </svg>
                     </div>
-                    <a class="px-4" target="_blank" :href="item.link">{{ item.label }}</a>
+                    <a
+                      style="direction: ltr"
+                      :dir="item.label == 'phone-label' ? 'ltr' : 'ltr'"
+                      class="px-4"
+                      target="_blank"
+                      :href="item.link"
+                      >{{ item.label }}</a
+                    >
                   </div>
                 </div>
               </div>
