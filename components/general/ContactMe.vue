@@ -67,7 +67,6 @@
 
 <script setup>
 import { ref } from "vue";
-import("@/assets/bootstrap-validation.js");
 
 const formData = ref({
   email: "",
