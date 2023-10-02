@@ -91,6 +91,32 @@
                 ]
             }
         ],
+    "subjects":[
+        {
+          "sub1":"JavaScript",
+          "sub2":"Angular"
+        },
+        {
+          "sub1":"Scss",
+          "sub2":".Net"
+        },
+        {
+          "sub1":"css",
+          "sub2":"Asp.mvc"
+        },
+        {
+          "sub1":"TypeScript",
+          "sub2":"Bootstrap"
+        },
+        {
+          "sub1":"VUE",
+          "sub2":"GridSome"
+        },
+        {
+          "sub1":"React",
+          "sub2":"Laravel"
+        }
+    ],
         "services":
             [
                 {

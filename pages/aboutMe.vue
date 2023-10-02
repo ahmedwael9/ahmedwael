@@ -4,30 +4,16 @@
       <div class="row gx-5 justify-content-between align-items-center">
         <div class="col-12 col-lg-7">
           <div class="fs-1 fw-bold" style="text-transform: uppercase">
-            why you hire me for you next projects?
+            {{ $t("aboutMeTitle") }}
           </div>
-          <div class="mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#F2E7D5"
-              width="50px"
-              height="50px"
-              viewBox="0 0 1024 1024"
-            >
-              <path
-                d="M499.8 594.3c0 77.3-68 136-139.2 136-85 0-160.8-54.1-160.8-171.6 0-137.6 117.5-255 289.2-267.4l4.6 29.4c-108.2 17-167 71.1-167 137.6 85.1-15.4 173.2 35.6 173.2 136zm324.7 0c0 77.3-68 136-139.2 136-85 0-160.8-54.1-160.8-171.6 0-137.6 117.5-255 289.2-267.4l4.6 29.4c-108.2 17-167 71.1-167 137.6 85.1-15.4 173.2 35.6 173.2 136z"
-              />
-            </svg>
+          <div class="mt-2">
+            <img src="../assets/images/qoma.svg" />
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt, quas
-            dolorem officiis sequi molestiae? Voluptates, quia debitis veritatis fuga id
-            dolorum recusandae esse earum dicta necessitatibus minus, excepturi dolores?
+            <span v-for="n in 4">{{ $t("lorem") }}</span>
           </p>
           <p class="mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias incidunt, quas
-            dolorem officiis sequi molestiae? Voluptates, quia debitis veritatis fuga id
-            dolorum recusandae esse earum dicta necessitatibus minus, excepturi dolores?
+            <span v-for="n in 4">{{ $t("lorem") }}</span>
           </p>
           <div class="row align-items-center py-3">
             <div class="col-auto">
@@ -104,8 +90,8 @@
     <div class="my-4 box-container position-relative" style="overflow: hidden">
       <div class="d-flex">
         <div
-          v-for="n in 10"
-          class="py-3 px-5 m-2 scroll-objects"
+          v-for="subject in subjects"
+          class="py-3 px-5 m-2 scroll-objects text-center"
           style="
             border: 1px solid #e5e7eb;
             border-radius: 3px;
@@ -113,13 +99,13 @@
             min-width: 200px;
           "
         >
-          java script
+          {{ subject.sub1 }}
         </div>
       </div>
       <div class="d-flex">
         <div
-          v-for="n in 10"
-          class="py-3 px-5 m-2 scroll-objects-bottom"
+          v-for="subject in subjects"
+          class="py-3 px-5 m-2 scroll-objects-bottom text-center"
           style="
             border: 1px solid #e5e7eb;
             border-radius: 3px;
@@ -127,7 +113,7 @@
             min-width: 200px;
           "
         >
-          java script
+          {{ subject.sub2 }}
         </div>
       </div>
       <div
@@ -214,24 +200,10 @@
     </div>
     <div style="height: 100vh" class="wrapper">
       <div
+        v-for="picture in pictures"
+        :class="picture.class"
         class="one bg-image"
         style="background-image: url('/images/index/9.png')"
-      ></div>
-      <div
-        style="background-image: url('/images/index/2385.png')"
-        class="two bg-image"
-      ></div>
-      <div
-        style="background-image: url('/images/index/9.png')"
-        class="three bg-image"
-      ></div>
-      <div
-        style="background-image: url('/images/index/2385.png')"
-        class="four bg-image"
-      ></div>
-      <div
-        style="background-image: url('/images/index/mokup.png')"
-        class="five bg-image"
       ></div>
     </div>
   </div>
@@ -279,6 +251,38 @@ const eduucations = ref([
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
   },
 ]);
+const pictures = ref([
+  {
+    title: "Unversity of petra",
+    class: "one",
+    des:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
+  },
+  {
+    title: "Unversity of petra",
+    class: "two",
+    des:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
+  },
+  {
+    title: "Unversity of petra",
+    class: "three",
+    des:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
+  },
+  {
+    title: "Unversity of petra",
+    class: "four",
+    des:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
+  },
+  {
+    title: "Unversity of petra",
+    class: "five",
+    des:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
+  },
+]);
 
 onMounted(() => {
   wavesurfer.value = WaveSurfer.create({
@@ -294,10 +298,12 @@ onMounted(() => {
 });
 
 const companies = ref([]);
+const subjects = ref([]);
 const fetchData = async () => {
   try {
     const response = locale.value === "en" ? DataEn : DataAr;
     companies.value = response.companies;
+    subjects.value = response.subjects;
   } catch (error) {
     console.error("Error fetching data:", error);
   }
