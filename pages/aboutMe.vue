@@ -198,7 +198,7 @@
         </div>
       </div>
     </div>
-    <div style="height: 100vh" class="wrapper">
+    <div style="height: 100vh; position: sticky; top: 0" class="wrapper">
       <div
         v-for="picture in pictures"
         :class="picture.class"
