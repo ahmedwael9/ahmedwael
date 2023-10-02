@@ -13,10 +13,9 @@
               type="email"
               class="form-control"
               id="validationCustom01"
-              style="border-radius: 20px 20px 0px 0px"
               required
             />
-            <div class="invalid-feedback text-center">Please provide a valid email.</div>
+            <div class="invalid-feedback">Please provide a valid email.</div>
           </div>
           <div class="mt-2">
             <textarea
@@ -25,10 +24,9 @@
               rows="4"
               class="form-control"
               id="validationCustom02"
-              style="border-radius: 0px 0px 20px 20px"
               required
             ></textarea>
-            <div class="invalid-feedback text-center">Please provide a description.</div>
+            <div class="invalid-feedback">Please provide a description.</div>
           </div>
           <div
             @click="submitForm()"
