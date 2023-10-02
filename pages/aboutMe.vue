@@ -148,7 +148,7 @@
       ></div>
     </div>
     <div class="py-5">
-      <div class="text-center pb-3">
+      <div class="pb-3">
         <h4 class="fw-bold m-0" style="text-transform: uppercase">
           {{ $t("contactMe") }}
         </h4>
@@ -158,7 +158,7 @@
       </div>
       <div class="mt-3">
         <div class="row">
-          <div v-for="n in 2" class="col-12 col-md-6 col-lg-4 mb-2">
+          <div v-for="n in 3" class="col-12 col-md-6 col-lg-4 mb-2">
             <div
               style="background-color: #f2e7d5"
               class="d-flex justify-content-between p-4"
@@ -211,6 +211,28 @@
           </div>
         </div>
       </div>
+    </div>
+    <div style="height: 100vh" class="wrapper">
+      <div
+        class="one bg-image"
+        style="background-image: url('/images/index/9.png')"
+      ></div>
+      <div
+        style="background-image: url('/images/index/2385.png')"
+        class="two bg-image"
+      ></div>
+      <div
+        style="background-image: url('/images/index/9.png')"
+        class="three bg-image"
+      ></div>
+      <div
+        style="background-image: url('/images/index/2385.png')"
+        class="four bg-image"
+      ></div>
+      <div
+        style="background-image: url('/images/index/mokup.png')"
+        class="five bg-image"
+      ></div>
     </div>
   </div>
 </template>
@@ -321,5 +343,36 @@ const currentSlide = ref(0);
   100% {
     transform: translate(-100%, 0);
   }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3/5;
+}
+.five {
+  grid-column: 2;
+  grid-row: 3/5;
+}
+.bg-image {
+  background-size: cover;
+  background-position: center;
 }
 </style>
