@@ -21,13 +21,7 @@
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 data-bs-title="Tooltip on top"
-                class="d-flex align-items-center justify-content-center"
-                style="
-                  width: 60px;
-                  height: 60px;
-                  border-radius: 50%;
-                  border: 3px solid #000000;
-                "
+                class="d-flex align-items-center justify-content-center btn-circle"
               >
                 <img
                   style="cursor: pointer"
@@ -55,7 +49,6 @@
             class="p-2 p-md-4 my-2 d-flex justify-content-center"
             style="
               transition: all 0.3s;
-              border: 3px solid #e5e7eb38;
               background-color: #f2e7d5;
               height: 110px;
               flex-direction: column;
@@ -69,9 +62,9 @@
               class="fw-bold d-flex align-items-center"
             >
               <div>
-                <img src="../assets/images/cap.svg" />
+                <img :src="item.icon" />
               </div>
-              <div class="px-2">
+              <div class="px-4 text-dark">
                 {{ item.title }}
               </div>
             </div>
@@ -87,11 +80,12 @@
         </div>
       </div>
     </div>
+    <!-- ----------------------------------------- -->
     <div class="my-4 box-container position-relative" style="overflow: hidden">
-      <div class="d-flex">
+      <div class="d-flex scroll-objects">
         <div
           v-for="subject in subjects"
-          class="py-3 px-5 m-2 scroll-objects text-center"
+          class="py-3 px-5 m-2 text-center"
           style="
             border: 1px solid #e5e7eb;
             border-radius: 3px;
@@ -101,11 +95,26 @@
         >
           {{ subject.sub1 }}
         </div>
+        <div class="d-flex position-absolute" style="transform: translateX(100%)">
+          <div
+            v-for="subject in subjects"
+            class="py-3 px-5 m-2 text-center"
+            style="
+              border: 1px solid #e5e7eb;
+              border-radius: 3px;
+              text-transform: uppercase;
+              min-width: 200px;
+            "
+          >
+            {{ subject.sub1 }}
+          </div>
+        </div>
       </div>
-      <div class="d-flex">
+      <!-- ---------------------------------- -->
+      <div class="d-flex scroll-objects-bottom">
         <div
           v-for="subject in subjects"
-          class="py-3 px-5 m-2 scroll-objects-bottom text-center"
+          class="py-3 px-5 m-2 text-center"
           style="
             border: 1px solid #e5e7eb;
             border-radius: 3px;
@@ -114,6 +123,20 @@
           "
         >
           {{ subject.sub2 }}
+        </div>
+        <div class="d-flex position-absolute" style="transform: translateX(100%)">
+          <div
+            v-for="subject in subjects"
+            class="py-3 px-5 m-2 text-center"
+            style="
+              border: 1px solid #e5e7eb;
+              border-radius: 3px;
+              text-transform: uppercase;
+              min-width: 200px;
+            "
+          >
+            {{ subject.sub2 }}
+          </div>
         </div>
       </div>
       <div
@@ -229,24 +252,23 @@ onMounted(() => {
 const { locale } = useI18n();
 const wavesurfer = ref();
 const isPlaying = ref(false);
-const openDialog = ref(false);
 const isActive = ref(0);
 
 const eduucations = ref([
   {
     title: "Unversity of petra",
-    icon: "cap",
+    icon: "/images/index/cap.svg",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
   },
   {
     title: "android studio (step by step)",
-    icon: "book",
+    icon: "/images/index/book.svg",
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
   },
   {
     title: "Tahaluf Al Emarat Technical Solutions (training)",
-    icon: "book",
+    icon: "/images/index/company.svg",
     des:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque suscipit consequatur incidunt maxime dolore deleniti iure placeat, magni",
   },
@@ -304,6 +326,10 @@ const fetchData = async () => {
     const response = locale.value === "en" ? DataEn : DataAr;
     companies.value = response.companies;
     subjects.value = response.subjects;
+    // setInterval(() => {
+    //   const last = subjects.value[1];
+    //   subjects.value.unshift(last);
+    // }, 1000);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -328,7 +354,6 @@ watch(
     fetchData();
   }
 );
-const currentSlide = ref(0);
 </script>
 <style lang="css">
 .scroll-objects,
@@ -336,18 +361,18 @@ const currentSlide = ref(0);
   transition: 0.3s;
 }
 .scroll-objects-bottom {
-  animation: 6s linear 0s infinite alternate movimiento;
+  animation: 22s linear 0s infinite running movimiento;
 }
 .scroll-objects {
-  animation: 8s linear 0s infinite alternate movimiento;
+  animation: 25s linear 0s infinite running movimiento;
 }
 
 @keyframes movimiento {
   0% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate(-100%, 0);
+    transform: translateX(-100%);
   }
 }
 

@@ -185,9 +185,7 @@ const downloadImage = (image) => {
   link.href = imageUrl;
   link.download = `${image}`;
   link.target = "_blank";
-  // document.body.appendChild(link);
   link.click();
-  // document.body.removeChild(link);
 };
 
 onMounted(() => {
@@ -310,5 +308,8 @@ watch(
   background-repeat: no-repeat;
   background-size: auto;
   background-position: left top;
+}
+ul {
+  list-style: none;
 }
 </style>

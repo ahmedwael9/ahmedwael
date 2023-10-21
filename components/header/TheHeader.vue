@@ -47,7 +47,7 @@
                 "
               >
                 <div
-                  @click="darkMode = !darkMode"
+                  @click="changeTheme"
                   :class="{ 'togle-theme': darkMode }"
                   class="d-flex justify-content-center align-items-center"
                   style="
@@ -186,12 +186,12 @@
         </div>
         <div class="col-12 col-md-5">
           <div class="w-100 my-3 text-center">
-            <img
+            <!-- <img
               class="w-100"
               v-if="!darkMode"
               src="../../assets/images/introImage.svg"
-            />
-            <img class="w-100" v-else src="../../assets/images/introImageDarkMode.svg" />
+            /> -->
+            <img class="w-100" src="../../assets/images/introImageDarkMode.svg" />
           </div>
         </div>
       </div>
@@ -200,9 +200,9 @@
 </template>
 <script setup>
 import { useI18n } from "vue-i18n";
-// import { useCounterStore } from "@/stores/index";
+import { useCounterStore } from "~/store/counter";
 
-// const store = useCounterStore();
+const store = useCounterStore();
 
 const { locale } = useI18n();
 const changeLanguage = () => {
@@ -215,8 +215,14 @@ const textShow = ref("");
 const darkMode = ref(false);
 
 const pdfUrl = () => {
-  const pdfUrl = "/AhmedDaqqa.pdf"; // Replace with the actual PDF file path
+  const pdfUrl = "/AhmedDaqqa.pdf";
   window.open(pdfUrl, "_blank");
+};
+
+const changeTheme = () => {
+  console.log(store.isDark, "dddddddddddddddd");
+  darkMode.value = !darkMode.value;
+  store.changeThemeColor();
 };
 
 onMounted(() => {

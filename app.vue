@@ -1,5 +1,9 @@
 <template>
-  <div class="aa" theme="light" :dir="$i18n.locale == 'ar' ? 'rtl' : 'en'">
+  <div
+    class="aa"
+    :theme="store.isDark ? 'dark' : 'light'"
+    :dir="$i18n.locale == 'ar' ? 'rtl' : 'en'"
+  >
     <NuxtLayout>
       <div class="shadow" :style="shadowStyle"></div>
       <NuxtPage />
@@ -7,6 +11,9 @@
   </div>
 </template>
 <script setup>
+import { useCounterStore } from "~/store/counter";
+
+const store = useCounterStore();
 const shadowStyle = ref({
   left: "0px",
   top: "0px",

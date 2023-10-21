@@ -1,5 +1,6 @@
 
 export default defineNuxtConfig({
+  modules: ['@pinia/nuxt'],
   devtools: { enabled: true },
   css: [
     "bootstrap/dist/css/bootstrap.min.css",
