@@ -173,7 +173,7 @@
               class="d-flex justify-content-between p-4"
             >
               <div>
-                <div class="fw-bold">FIFASOFT COMPANY</div>
+                <div class="fw-bold text-dark">FIFASOFT COMPANY</div>
                 <p>Nov/2022 - Present</p>
               </div>
               <div
