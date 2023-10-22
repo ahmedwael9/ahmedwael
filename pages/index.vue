@@ -38,11 +38,6 @@
         </div>
       </div>
     </div>
-    <!-- <div>
-      <p>Count: {{ count }}</p>
-      <p>Double Count: {{ doubleCount }}</p>
-      <button @click="increment">Increment</button>
-    </div> -->
     <div class="pb-5">
       <div class="container">
         <div
@@ -53,16 +48,31 @@
         >
           <div class="row m-0 align-items-center">
             <div
-              :class="{ 'order-1 ': index % 2 != 0, 'text-light': project.textLight }"
+              style="overflow: hidden"
+              :class="{
+                'order-1 ': index % 2 != 0,
+                'text-light': project.textLight,
+                'text-dark': !project.textLight,
+              }"
               class="col-12 col-md-6 p-0 p-5"
             >
-              <div class="fs-1 fw-bold" :class="{}">
+              <div
+                data-aos-duration="1500"
+                :data-aos="index % 2 == 0 ? 'fade-right' : 'fade-left'"
+                class="fs-1 fw-bold"
+                :class="{}"
+              >
                 {{ project.name }}
               </div>
-              <p>
+              <p
+                data-aos-duration="1750"
+                :data-aos="index % 2 == 0 ? 'fade-right' : 'fade-left'"
+              >
                 {{ project.desrciption }}
               </p>
               <div
+                data-aos-duration="2000"
+                :data-aos="index % 2 == 0 ? 'fade-right' : 'fade-left'"
                 class="btn px-5"
                 @click="$router.push(`/details/${project.id}`)"
                 :class="

@@ -18,6 +18,12 @@ $info: #17a2b8;
   background-color: var(--bg-btn) !important;
   color: #ffffff !important;
 }
+.text-dark {
+  color: #393e46 !important;
+}
+.text-muted {
+  color: #393e46 !important;
+}
 
 // Import Bootstrap after overriding variables
 @import 'bootstrap/dist/css/bootstrap.css';

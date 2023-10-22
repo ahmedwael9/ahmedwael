@@ -4,7 +4,7 @@
       <div>
         <div class="row justify-content-center pt-5">
           <div class="col-12">
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col">
                 <div class="">
                   <span dir="ltr" style="color: #6d9886" class="fw-bold logo-footer">
@@ -16,35 +16,37 @@
                   {{ $t("introDiscrition") }}
                 </p>
               </div>
-              <div class="col" style="align-self: center">
-                <div
-                  style="
-                    min-height: 200px;
-                    border-right: 2px solid grey;
-                    border-left: 2px solid grey;
-                  "
-                >
+              <div class="col">
+                <div style="border-right: 2px solid grey; border-left: 2px solid grey">
                   <div
                     v-for="n in social"
                     style="cursor: pointer"
-                    class="px-3 d-flex align-items-center justify-content-center mb-3 icon-footer"
+                    class="px-3 py-1 d-flex align-items-center justify-content-center icon-footer"
                   >
                     <div v-if="n.type == 'face'" class="">
-                      <img src="../../assets/images/face.svg" />
+                      <a :href="n.link">
+                        <img src="../../assets/images/face.svg" />
+                      </a>
                     </div>
                     <div v-else-if="n.type == 'insta'" class="">
-                      <img src="../../assets/images/insta.svg" />
+                      <a :href="n.link">
+                        <img src="../../assets/images/insta.svg" />
+                      </a>
                     </div>
                     <div v-else-if="n.type == 'twiter'" class="">
-                      <img src="../../assets/images/twiter.svg" />
+                      <a :href="n.link">
+                        <img src="../../assets/images/twiter.svg" />
+                      </a>
                     </div>
                     <div v-else class="">
-                      <img src="../../assets/images/linkend.svg" />
+                      <a :href="n.link">
+                        <img src="../../assets/images/linkend.svg" />
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col" style="align-self: center">
+              <div class="col">
                 <div v-for="item in info">
                   <div
                     class="d-flex align-items-center mb-3"
@@ -198,7 +200,7 @@ const info = [
 const social = ref([
   {
     type: "insta",
-    link: "",
+    link: "https://www.instagram.com/_.k2w/",
   },
   {
     type: "face",
@@ -206,10 +208,6 @@ const social = ref([
   },
   {
     type: "twiter",
-    link: "",
-  },
-  {
-    type: "linkend",
     link: "",
   },
 ]);
