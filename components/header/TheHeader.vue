@@ -13,7 +13,7 @@
             <li class="nav-item">
               <div class="active">
                 <a
-                  class="nav-link"
+                  class="nav-link hoverable"
                   @click="$router.push('/')"
                   aria-current="page"
                   href="#"
@@ -22,12 +22,12 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push('/aboutMe')" href="#">{{
+              <a class="nav-link hoverable" @click="$router.push('/aboutMe')" href="#">{{
                 $t("aboutMe")
               }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ $t("projects") }}</a>
+              <a class="nav-link hoverable" href="#">{{ $t("projects") }}</a>
             </li>
           </ul>
         </div>
@@ -337,7 +337,12 @@ onMounted(() => {
 // }
 
 .togle-theme {
-  //   flex-direction: row-reverse;
   transform: translateX(30px);
+}
+
+[dir="rtl"]{
+  .togle-theme {
+    transform: translateX(-30px);
+  }
 }
 </style>

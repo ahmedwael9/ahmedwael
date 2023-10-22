@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-5" style="min-height: 100vh">
+  <div class="container pb-5" style="min-height: 100vh">
     <div class="my-5">
       <div class="row gx-5 justify-content-between align-items-center">
         <div class="col-12 col-lg-7">
@@ -94,7 +94,6 @@
               </div>
             </div>
             <p
-              :data-aos="'fade-right'"
               v-if="isActive == index"
               style="transition: all 0.8s"
               class="py-2"
@@ -404,7 +403,7 @@ watch(
 }
 .one {
   grid-column: 1 / 2;
-  grid-row: 1/2;
+  grid-row: 1/3;
 }
 .two {
   grid-column: 2 / 4;
@@ -412,7 +411,7 @@ watch(
 }
 .three {
   grid-column: 1;
-  grid-row: 2 / 5;
+  grid-row: 3 / 5;
 }
 .four {
   grid-column: 3;
@@ -425,5 +424,34 @@ watch(
 .bg-image {
   background-size: cover;
   background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1/3;
+}
+.two {
+  grid-column: 3;
+  grid-row: 3 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 3 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3/5;
+}
+.five {
+  grid-column: 2;
+  grid-row: 3/5;
+}
 }
 </style>

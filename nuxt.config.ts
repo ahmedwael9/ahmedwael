@@ -10,9 +10,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-      {
-        src: "bootstrap/dist/js/bootstrap.min.js",
-      },
+        { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' }
     ],
       link: [
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },

@@ -266,6 +266,7 @@ watch(
 
 .half-a-border-on-bottom {
   border-bottom: 5px solid;
+  padding-bottom: 14px;
   border-image: linear-gradient(to right, #f2e7d5 50%, transparent 50%) 100% 1;
 }
 

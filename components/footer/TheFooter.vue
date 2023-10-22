@@ -38,7 +38,7 @@
                         <img src="../../assets/images/twiter.svg" />
                       </a>
                     </div>
-                    <div v-else class="">
+                    <div v-else>
                       <a :href="n.link">
                         <img src="../../assets/images/linkend.svg" />
                       </a>
@@ -208,6 +208,10 @@ const social = ref([
   },
   {
     type: "twiter",
+    link: "",
+  },
+  {
+    type: "linkend",
     link: "",
   },
 ]);
