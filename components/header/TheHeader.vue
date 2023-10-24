@@ -36,7 +36,7 @@
             <div class="nav-link text-dark p-0 px-4" href="#">
               <div
                 @click="changeTheme"
-                class="p-1 d-none d-lg-block"
+                class="hoverable p-1 d-none d-lg-block"
                 style="
                   width: 60px;
                   height: 30px;
@@ -153,7 +153,7 @@
               @click="changeLanguage"
               type="button"
               style="border-radius: 18px"
-              class="btn btn-light"
+              class="hoverable btn btn-light"
             >
               {{ locale == "en" ? "AR" : "EN" }}
             </button>

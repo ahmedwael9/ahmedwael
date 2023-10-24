@@ -31,31 +31,26 @@ onMounted(() => {
   const $hoverables = document.querySelectorAll('.hoverable');
   console.log($hoverables,'dddd')
   for (let i = 0; i < $hoverables.length; i++) {
-    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseenter', ()=>{onMouseHover($hoverables[i])});
     $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
   }
 });
 
-function onMouseHover() {
-  const $hoverables = document.querySelectorAll('.hoverable');
+function onMouseHover(element) {
   document.removeEventListener("mousemove", updateShadowPosition,false); 
-  // window.scrollY + document.querySelector('#elementId').getBoundingClientRect().top;
-  // window.scrollX + document.querySelector('#elementId').getBoundingClientRect().left ;
-  // shadowStyle.value.transform=`'translate'${($hoverables[0].getBoundingClientRect().top+'px',$hoverables[0].getBoundingClientRect().left+'px')}`
-  shadowStyle.value.left =$hoverables[2].getBoundingClientRect().left + $hoverables[2].getBoundingClientRect().width/2+10 +"px";
-  shadowStyle.value.top = $hoverables[2].getBoundingClientRect().top + $hoverables[2].getBoundingClientRect().height /2+10+"px";
+  shadowStyle.value.transition='0.6s'
+  shadowStyle.value.left =element.getBoundingClientRect().left + element.getBoundingClientRect().width/2+10 +"px";
+  shadowStyle.value.top = element.getBoundingClientRect().top + element.getBoundingClientRect().height /2+10+"px";
   shadowStyle.value.scale=1.4
   shadowStyle.value.border='2px solid rgb(109, 152, 134,0.7) !important'
   shadowStyle.value.boxShadow='rgba(109, 152, 134, 0.35) 0px 5px 15px !important'
 }
 function onMouseHoverOut() {
   document.addEventListener("mousemove", updateShadowPosition);
-  shadowStyle.value.left ="0px";
-  shadowStyle.value.top = "0px";
+  shadowStyle.value.transition='unset !important'
   shadowStyle.value.scale=1
   shadowStyle.value.border='2px solid white !important'
   shadowStyle.value.boxShadow=' rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important'
-  // shadowStyle.value.transform=`translate(-50%, -50%)`
 }
 
 </script>
