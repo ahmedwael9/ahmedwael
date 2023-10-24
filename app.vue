@@ -25,15 +25,6 @@ const updateShadowPosition = (event) => {
   shadowStyle.value.top = event.pageY + "px";
 };
 
-onMounted(() => {
-  document.addEventListener("mousemove", updateShadowPosition);
-  const $hoverables = document.querySelectorAll('.hoverable');
-  console.log($hoverables,'dddd')
-  for (let i = 0; i < $hoverables.length; i++) {
-    $hoverables[i].addEventListener('mouseenter', ()=>{onMouseHover($hoverables[i])});
-    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-  }
-});
 
 function onMouseHover(element) {
   document.removeEventListener("mousemove", updateShadowPosition,false); 
@@ -50,10 +41,24 @@ function onMouseHoverOut() {
   shadowStyle.value.boxShadow=' rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important'
 }
 
+
+onMounted(() => {
+  const $hoverables = document.querySelectorAll('.hoverable');
+  for (let i = 0; i < $hoverables.length; i++) {
+    $hoverables[i].addEventListener('mouseenter', ()=>{onMouseHover($hoverables[i])});
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+  }
+});
+
+onBeforeMount(() => {
+  document.addEventListener("mousemove", ()=>{updateShadowPosition});
+});
+
 </script>
 <style>
 body {
-  height: 100vh;
+  height: 100%;
+  position: relative;
   overflow-x: hidden;
 }
 </style>

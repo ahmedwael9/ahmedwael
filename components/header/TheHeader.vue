@@ -185,7 +185,7 @@
           </div>
         </div>
         <div class="col-12 col-md-5">
-          <div class="w-100 my-3 text-center">
+          <div class="d-none d-md-block w-100 my-3 text-center">
             <img class="w-100" src="../../assets/images/introImageDarkMode.svg" />
           </div>
         </div>
