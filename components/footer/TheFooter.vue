@@ -49,7 +49,7 @@
               <div class="col">
                 <div v-for="item in info">
                   <div
-                    class="d-flex align-items-center mb-3"
+                    class="d-flex hoverable align-items-center mb-3"
                     :class="
                       item.icon == 'map'
                         ? 'map-label'

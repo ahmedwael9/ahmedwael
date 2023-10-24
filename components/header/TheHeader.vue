@@ -13,7 +13,7 @@
             <li class="nav-item">
               <div class="active">
                 <a
-                  class="nav-link hoverable"
+                  class="nav-link hoverable "
                   @click="$router.push('/')"
                   aria-current="page"
                   href="#"
@@ -21,13 +21,13 @@
                 >
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link hoverable" @click="$router.push('/aboutMe')" href="#">{{
+            <li class="nav-item hoverable">
+              <a class="nav-link " @click="$router.push('/aboutMe')" href="#">{{
                 $t("aboutMe")
               }}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link hoverable" href="#">{{ $t("projects") }}</a>
+            <li class="nav-item hoverable">
+              <a class="nav-link " href="#">{{ $t("projects") }}</a>
             </li>
           </ul>
         </div>
@@ -35,6 +35,7 @@
           <li class="row align-items-center">
             <div class="nav-link text-dark p-0 px-4" href="#">
               <div
+                @click="changeTheme"
                 class="p-1 d-none d-lg-block"
                 style="
                   width: 60px;
@@ -47,7 +48,6 @@
                 "
               >
                 <div
-                  @click="changeTheme"
                   :class="{ 'togle-theme': darkMode }"
                   class="d-flex justify-content-center align-items-center"
                   style="
