@@ -1,13 +1,17 @@
 <template>
   <div class="pb-2 header-section app">
     <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand m-0" href="#">
+      <div class="container logo-header">
+        <!-- <a class="navbar-brand m-0" href="#">
           <div dir="ltr" class="fw-bold logo">
             AHMED<span>WAEL</span>
             <span class="material-icons icon">code</span>
           </div>
-        </a>
+        </a> -->
+        <button style="direction: ltr;" class="button" data-text="Awesome">
+            <span class="actual-text">&nbsp;&nbsp;AHMEDWAEL&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">&nbsp;&nbsp;AHMEDWAEL&nbsp;</span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav px-3">
             <li class="nav-item">

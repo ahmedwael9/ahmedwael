@@ -33,7 +33,7 @@
             style="cursor: pointer"
             class="text-center d-flex justify-content-center align-items-center mt-3"
           >
-            <div class="p-2 btn-circle">
+            <div style="overflow: hidden;display: flex;justify-content: center;align-items: center;" class="p-2 btn-circle">
               <svg
                 :class="{ fly: sendMessage }"
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +49,12 @@
                   :fill="!store.isDark ? '#393e46' : '#ffffff'"
                 />
               </svg>
+              <div style="position: absolute;" class="">
+                <svg :class="{ 'd-none': !sendMessage }" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+                <path d="M16.0303 10.0303C16.3232 9.73744 16.3232 9.26256 16.0303 8.96967C15.7374 8.67678 15.2626 8.67678 14.9697 8.96967L10.5 13.4393L9.03033 11.9697C8.73744 11.6768 8.26256 11.6768 7.96967 11.9697C7.67678 12.2626 7.67678 12.7374 7.96967 13.0303L9.96967 15.0303C10.2626 15.3232 10.7374 15.3232 11.0303 15.0303L16.0303 10.0303Z" fill="green"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" fill="green"/>
+              </svg>
+              </div>
             </div>
             <div class="px-2" style="text-transform: uppercase">
               {{ $t("sendTheMessage") }}
@@ -73,53 +79,38 @@ const formData = ref({
 const sendMessage = ref(false);
 
 const submitForm = async () => {
-  const form = document.querySelector(".needs-validation");
+  
+  sendMessage.value = true;
+  // const form = document.querySelector(".needs-validation");
 
-  if (form.checkValidity()) {
-    const response = await fetch("https://formspree.io/f/mlezryoz", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData.value),
-    });
+  // if (form.checkValidity()) {
+  //   const response = await fetch("https://formspree.io/f/mlezryoz", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(formData.value),
+  //   });
 
-    if (response.ok) {
-      sendMessage.value = true;
-      console.log("Form submitted successfully");
-      formData.value.description = "";
-      formData.value.email = "";
-    } else {
-      console.error("Form submission failed");
-    }
-  } else {
-    console.error("Form is not valid");
-    form.classList.add("was-validated");
-  }
+  //   if (response.ok) {
+  //     sendMessage.value = true;
+  //     console.log("Form submitted successfully");
+  //     formData.value.description = "";
+  //     formData.value.email = "";
+  //   } else {
+  //     console.error("Form submission failed");
+  //   }
+  // } else {
+  //   console.error("Form is not valid");
+  //   form.classList.add("was-validated");
+  // }
 };
 </script>
 <style>
 .fly {
-  transition: 0.6s;
-  animation: 8s linear 0s infinite backwards flyplane;
+  transition: 2s;
+  transform: translate(129px, -50px);
 }
 
-@keyframes flyplane {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(39px, -20px) rotate(10deg);
-  }
-  50% {
-    transform: translate(89px, -30px) rotate(20deg);
-  }
-  75% {
-    transform: translate(139px, -40px) rotate(40deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(179px, -50px) rotate(60deg);
-  }
-}
+
 </style>

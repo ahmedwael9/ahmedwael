@@ -58,7 +58,7 @@
                         : 'phone-label'
                     "
                   >
-                    <div v-if="item.icon == 'map'" class="icon-footer">
+                    <div v-if="item.icon == 'map'" class="hoverable icon-footer">
                       <svg
                         class="map"
                         xmlns="http://www.w3.org/2000/svg"
