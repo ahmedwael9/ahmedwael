@@ -500,8 +500,8 @@ watch(
   display: flex;
   justify-content: center;
   color: #fff;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 100%;
   background: linear-gradient(30deg, #f2e7d5 20%, #f2e7d58c 80%);
   transition: all 0.3s ease-in-out 0s;
