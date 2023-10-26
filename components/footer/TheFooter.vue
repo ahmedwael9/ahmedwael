@@ -122,7 +122,7 @@
                       </svg>
                     </div>
                     <a
-                      style="direction: ltr"
+                      style="direction: ltr;letter-spacing: 2.3px;"
                       :dir="item.label == 'phone-label' ? 'ltr' : 'ltr'"
                       class="px-4"
                       target="_blank"
