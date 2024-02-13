@@ -12,6 +12,9 @@
             <span class="actual-text">&nbsp;&nbsp;AHMEDWAEL&nbsp;</span>
             <span aria-hidden="true" class="hover-text">&nbsp;&nbsp;AHMEDWAEL&nbsp;</span>
         </button>
+        <div class="">
+          <img style="height: 30px;" src="https://cdn.pixabay.com/animation/2022/09/13/17/55/17-55-41-668_512.gif">
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav px-3">
             <li class="nav-item">
