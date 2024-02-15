@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="pb-5">
+    <div class="pb-5 ">
       <GeneralContactMe />
     </div>
   </div>
