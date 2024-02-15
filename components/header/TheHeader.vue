@@ -2,12 +2,6 @@
   <div class="pb-2 header-section app">
     <nav class="navbar navbar-expand-lg">
       <div class="container logo-header">
-        <!-- <a class="navbar-brand m-0" href="#">
-          <div dir="ltr" class="fw-bold logo">
-            AHMED<span>WAEL</span>
-            <span class="material-icons icon">code</span>
-          </div>
-        </a> -->
         <button style="direction: ltr;" class="button" data-text="Awesome">
             <span class="actual-text">&nbsp;&nbsp;AHMEDWAEL&nbsp;</span>
             <span aria-hidden="true" class="hover-text">&nbsp;&nbsp;AHMEDWAEL&nbsp;</span>
@@ -251,9 +245,22 @@ onMounted(() => {
 .header-section {
   background-image: url("/assets/images/bgCorner.svg");
   background-repeat: no-repeat;
+  transition: 0.4s;
   background-size: auto;
   background-position: left top;
+  background-size: 150px;
+  animation: animatedBackground 10s linear infinite forwards;
 }
+
+@keyframes animatedBackground {
+  from {
+  background-size: 150px;
+  }
+  to {
+  background-size: 400px;
+  }
+}
+
 
 .btn-lang {
   border-radius: 50px;
