@@ -249,10 +249,10 @@ onMounted(() => {
   background-size: auto;
   background-position: left top;
   background-size: 150px;
-  animation: animatedBackground 10s linear infinite forwards;
+  animation: corneranimation 10s linear infinite forwards;
 }
 
-@keyframes animatedBackground {
+@keyframes corneranimation {
   from {
   background-size: 150px;
   }
