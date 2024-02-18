@@ -259,7 +259,7 @@ onMounted(() => {
   background-size: 150px;
   }
   to {
-  background-size: 400px;
+  background-size: 250px;
   }
 }
 

@@ -57,7 +57,7 @@
           >
             <div class="container" style="text-align: start">
               <div class="text-white">
-                <h1 class="fw-bold w-md-75" style="text-transform: uppercase">
+                <h1 class="fw-bold w-75" style="text-transform: uppercase">
                   {{ slide.title }}
                 </h1>
                 <div class="" style="text-align: justify">
@@ -103,12 +103,10 @@
       </div>
       <div class="py-5 px-3 proparity-section" style="border-radius: 6px">
         <div class="row align-items-center justify-content-center">
-          <div class="col-12 col-md-5">
-            <div class="text-center" style="width: 100%">
-              <canvas id="myChart"></canvas>
-            </div>
+          <div class="col-12 col-lg-5">
+              <canvas  id="myChart"></canvas>
           </div>
-          <div class="col-12 col-md-5">
+          <div class="col-12 col-lg-5 py-5">
               <div v-for="language in project?.languages" class="mb-3">
                 <div class="row align-items-center">
                   <div class="col-2">
