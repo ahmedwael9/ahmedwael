@@ -242,10 +242,12 @@ onMounted(() => {
 });
 </script>
 <style lang="scss">
+*{
+  transition:  background-color 0.3s;
+}
 .header-section {
   background-image: url("/assets/images/bgCorner.svg");
   background-repeat: no-repeat;
-  transition: 0.4s;
   background-size: auto;
   background-position: left top;
   background-size: 150px;
